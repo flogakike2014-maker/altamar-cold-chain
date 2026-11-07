@@ -345,6 +345,82 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
 @media (max-width:560px){.vsteps{grid-template-columns:1fr}#iso-svg{height:520px}.stage-bar{position:static;padding:14px 14px 0}}
 @media print{.stage-bar,.vfilter{display:none!important}}
 
+
+/* ===== Escenarios y validación ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.btn-dark{background:var(--navy);color:#fff}.btn-dark:hover{background:var(--navy-2);color:#fff}
+.vblock{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:24px}
+.vblock:first-of-type{margin-top:0}
+.vblock-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;align-items:start;margin-bottom:22px}
+.vblock-head h3{font-size:clamp(21px,2.2vw,26px);margin-top:10px}
+.vblock-head p{color:var(--muted);font-size:15.5px;line-height:1.65}
+.inc{display:flex;flex-direction:column;gap:14px}
+.inc-ctrl{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.inc-range{flex:1;min-width:200px;display:flex}
+.inc-range input,.field input[type=range]{width:100%;accent-color:var(--teal);min-height:44px}
+.inc-clock{font:700 26px var(--display);color:var(--navy);min-width:88px;text-align:right}
+.inc-scale{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-left:260px}
+.lane{display:grid;grid-template-columns:244px minmax(0,1fr);gap:16px;align-items:center}
+.lane-name b{display:block;font-family:var(--display);color:var(--navy);font-size:15.5px}
+.lane-name small{font-size:12.5px;color:var(--muted);line-height:1.4;display:block}
+.track{position:relative;height:40px;border-radius:10px;background:var(--ice);overflow:visible}
+.track .fill{position:absolute;left:0;top:0;bottom:0;border-radius:10px;width:0}
+#lane-man .fill{background:repeating-linear-gradient(45deg,#F6D3BE,#F6D3BE 6px,#FBEDE4 6px,#FBEDE4 12px)}
+#lane-iot .fill{background:var(--teal-soft)}
+.track .head{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--navy);left:0}
+.mk{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);background:#C9D6DF;transition:transform .25s,background .25s}
+.mk.on{transform:scale(1.25)}
+#lane-iot .mk.on{background:var(--teal)}
+#lane-man .mk.on{background:var(--warn)}
+.mk.zone{border-radius:4px;width:auto;height:20px;margin-top:-10px;background:rgba(181,83,26,.12);border:1px dashed var(--warn);box-shadow:none}
+.lane-state{grid-column:2;font-size:13.5px;font-weight:600;color:var(--navy);min-height:20px}
+.inc-log{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.inc-log li{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;opacity:.35;transition:opacity .3s}
+.inc-log li.on{opacity:1}
+.inc-log li b{font-family:var(--display);color:var(--navy)}
+.inc-log li .who{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.inc-log li.iot .who{color:var(--teal-2)}.inc-log li.man .who{color:#8A3A10}
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:28px}
+.calc-in{display:flex;flex-direction:column;gap:18px}
+.presets{display:flex;flex-wrap:wrap;gap:8px}
+.field{display:flex;flex-direction:column;gap:6px;border:0;padding:0;margin:0}
+.field>span,.field legend{font-size:14px;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;gap:12px;width:100%;padding:0}
+.field output{font-family:var(--display);color:var(--teal-2)}
+.segs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
+.segs label{position:relative}
+.segs input{position:absolute;opacity:0}
+.segs span{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--line);border-radius:10px;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer;background:#fff}
+.segs input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.segs input:focus-visible+span{outline:3px solid var(--teal);outline-offset:2px}
+.calc-out{display:flex;flex-direction:column;gap:14px}
+.verdict{border-radius:14px;padding:14px 18px;font-size:14.5px;line-height:1.5}
+.verdict b{display:block;font-family:var(--display);font-size:18px}
+.verdict.ok{background:var(--teal-soft);color:var(--teal-2)}
+.verdict.mid{background:#FFF4D6;color:#7A5A00}
+.verdict.bad{background:var(--warn-soft);color:#8A3A10}
+.cgrid2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cgrid2 div{background:var(--ice);border-radius:12px;padding:12px 14px}
+.cgrid2 span{display:block;font-size:12.5px;color:var(--muted)}
+.cgrid2 b{display:block;font-family:var(--display);font-size:clamp(18px,1.8vw,22px);color:var(--navy);white-space:nowrap}
+.c-chart svg{width:100%;height:auto;display:block}
+.pilot{display:flex;flex-direction:column;gap:18px}
+.pilot-time{display:flex;gap:6px}
+.pilot-time div{border-radius:10px;padding:12px 14px;font-size:13.5px;line-height:1.45;background:var(--navy);color:#C9D6E2;min-width:0}
+.pilot-time div:first-child{background:var(--teal);color:#fff}
+.pilot-time div:last-child{background:var(--warn);color:#fff}
+.pilot-time b{display:block;font-family:var(--display);color:#fff;font-size:15px}
+.ptable{width:100%;border-collapse:collapse;font-size:14px;min-width:820px}
+.ptable th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+.ptable td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.ptable td:first-child{font-weight:600;color:var(--navy)}
+.ptable td:nth-child(2){white-space:nowrap;color:var(--teal-2);font-weight:600}
+.gate{border-left:3px solid var(--teal);background:var(--ice-2);border-radius:0 12px 12px 0;padding:16px 20px}
+.gate h4{font-size:16px;margin-bottom:8px}
+.gate ul{margin:0;padding-left:18px}.gate li{font-size:14.5px;margin:4px 0}
+@media (max-width:980px){.vblock-head,.calc{grid-template-columns:1fr;gap:14px}.cgrid2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.lane{grid-template-columns:1fr;gap:8px}.lane-state{grid-column:1}.inc-scale{margin-left:0}.inc-log{grid-template-columns:1fr}.pilot-time{flex-direction:column}.pilot-time div{flex:auto!important}.vblock{padding:20px}}
+@media (max-width:480px){.cgrid2{grid-template-columns:1fr 1fr}.segs{grid-template-columns:1fr}}
+
 @media print{.nav,.hero-actions,.filters,.copy,.toast{display:none!important}.section{padding:40px 0;break-inside:avoid}.panel{display:block!important}details.res{break-inside:avoid}}
 </style>
 </head>
@@ -361,6 +437,7 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
       <a href="#proyecto">Proyecto</a>
       <a href="#modelo">Modelo 3D</a>
       <a href="#desarrollo">Desarrollo</a>
+      <a href="#validacion">Validación</a>
       <a href="#evidencias">Evidencias</a>
       <a href="#competencias">Competencias</a>
       <a href="#contacto">Contacto</a>
@@ -481,7 +558,7 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
           <button class="sbtn" id="v-tour" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path id="v-tour-ico" d="M7 4l13 8-13 8z" fill="currentColor"/></svg><span id="v-tour-txt">Recorrido guiado</span></button>
           <button class="sbtn" id="v-reset">Vista general</button>
         </div>
-        <svg id="iso-svg" viewBox="-200 -372 590 700" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="iso-title iso-desc">
+        <svg id="iso-svg" viewBox="-305 -372 695 700" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="iso-title iso-desc">
           <title id="iso-title">Modelo isométrico de la plataforma IoT de Altamar Cold-Chain 4.0</title>
           <desc id="iso-desc">Cuatro capas apiladas: percepción sobre la planta, conectividad, procesamiento y aplicación. Cada componente es un elemento seleccionable que muestra su ficha.</desc>
           <defs>
@@ -644,11 +721,130 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
   </div>
 </section>
 
+
+<!-- 5. ESCENARIOS Y VALIDACIÓN -->
+<section class="section" id="validacion" aria-labelledby="t-val" style="background:var(--ice-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">05</span><p class="eyebrow">Escenarios y validación</p>
+      <h2 id="t-val">Pon a prueba el proyecto</h2>
+      <p class="lead">Tres herramientas para examinar el proyecto con criterio propio: un incidente recorrido minuto a minuto, un simulador financiero que usa las mismas fórmulas del entregable y el plan para validar en planta cada supuesto antes del despliegue.</p>
+    </div>
+
+    <!-- A. Antes y después -->
+    <div class="vblock">
+      <div class="vblock-head">
+        <div><span class="tag alta">Escenario ilustrativo</span><h3>A · Una puerta queda abierta a las 02:00</h3></div>
+        <p>El escenario no describe un incidente real de Altamar. Aplica las frecuencias de registro del Data Map y las reglas de alarma del entregable de Arquitectura IoT para comparar cuándo se entera la planta en cada caso.</p>
+      </div>
+      <div class="inc">
+        <div class="inc-ctrl">
+          <button class="btn btn-dark" id="inc-play"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path id="inc-ico" d="M7 4l13 8-13 8z" fill="currentColor"/></svg><span id="inc-play-txt">Reproducir</span></button>
+          <label class="inc-range"><span class="sr">Hora del escenario</span><input type="range" id="inc-t" min="0" max="240" step="1" value="0" aria-valuetext="02:00"></label>
+          <output id="inc-clock" class="inc-clock">02:00</output>
+        </div>
+        <div class="inc-scale" aria-hidden="true"><span>02:00</span><span>03:00</span><span>04:00</span><span>05:00</span><span>06:00</span></div>
+        <div class="lane" id="lane-man">
+          <div class="lane-name"><b>Hoy · registro manual</b><small>Lectura del operario cada 2-4 h, con vacíos nocturnos</small></div>
+          <div class="track"><div class="fill"></div><div class="head"></div></div>
+          <div class="lane-state" id="st-man"></div>
+        </div>
+        <div class="lane" id="lane-iot">
+          <div class="lane-name"><b>Con Cold-Chain 4.0</b><small>Sensor de puerta y alertas escalonadas</small></div>
+          <div class="track"><div class="fill"></div><div class="head"></div></div>
+          <div class="lane-state" id="st-iot"></div>
+        </div>
+        <ol class="inc-log" id="inc-log" aria-live="polite"></ol>
+        <p class="note">Reglas tomadas del entregable: alarma de puerta abierta más de 3 min; escalamiento operador → jefe de frío → gerente de planta en 15 min; alarma de temperatura si la cámara supera -18 °C durante 10 min. El tiempo que tarda la cámara en calentarse depende de la carga y del equipo, por eso no se simula.</p>
+      </div>
+    </div>
+
+    <!-- B. Simulador financiero -->
+    <div class="vblock">
+      <div class="vblock-head">
+        <div><span class="tag teal">Fórmulas del entregable</span><h3>B · Simulador de sensibilidad financiera</h3></div>
+        <p>Mueve los supuestos y observa el efecto en la rentabilidad. Con los valores base reproduce exactamente la hoja "Payback y ROI": inversión de S/ 132,385, puesta en marcha de 3 meses al 50&nbsp;%, OPEX de S/ 9,600 anuales desde el año 2 y sin valor residual.</p>
+      </div>
+      <div class="calc">
+        <div class="calc-in">
+          <div class="presets" role="group" aria-label="Escenarios predefinidos">
+            <button class="chip" data-p="base" aria-pressed="true">Base</button>
+            <button class="chip" data-p="pes" aria-pressed="false">Pesimista</button>
+            <button class="chip" data-p="gran" aria-pressed="false">Gran empresa</button>
+          </div>
+          <label class="field"><span>Beneficio mensual estimado <output id="o-b">S/ 9,000</output></span><input type="range" id="i-b" min="0" max="18000" step="250" value="9000"></label>
+          <fieldset class="field seg"><legend>Cofinanciamiento del fondo</legend>
+            <div role="radiogroup" class="segs">
+              <label><input type="radio" name="fondo" value="1" checked><span>Sin fondo</span></label>
+              <label><input type="radio" name="fondo" value="0.5"><span>Fondo 50&nbsp;%</span></label>
+              <label><input type="radio" name="fondo" value="0.3"><span>Fondo 70&nbsp;%</span></label>
+            </div>
+          </fieldset>
+          <label class="field"><span>Tasa de descuento (COK) <output id="o-r">12.0&nbsp;%</output></span><input type="range" id="i-r" min="6" max="30" step="0.5" value="12"></label>
+          <p class="note">Base: S/ 9,000/mes, sin fondo, COK 12&nbsp;%. Pesimista: beneficio al 50&nbsp;%. Gran empresa: fondo al 50&nbsp;%, tope habitual de ProInnóvate para gran empresa según el entregable.</p>
+        </div>
+        <div class="calc-out">
+          <div class="verdict" id="c-verdict"></div>
+          <div class="cgrid2">
+            <div><span>Aporte propio</span><b id="c-i"></b></div>
+            <div><span>Payback simple</span><b id="c-ps"></b></div>
+            <div><span>Payback descontado</span><b id="c-pd"></b></div>
+            <div><span>VAN a 3 años</span><b id="c-van"></b></div>
+            <div><span>TIR anual</span><b id="c-tir"></b></div>
+            <div><span>Índice de rentabilidad</span><b id="c-ir"></b></div>
+          </div>
+          <div id="c-chart" class="c-chart"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C. Plan de validación -->
+    <div class="vblock">
+      <div class="vblock-head">
+        <div><span class="tag teal">Piloto del entregable</span> <span class="tag">Secuencia y criterios propuestos</span><h3>C · Plan de validación del piloto</h3></div>
+        <p>El entregable fija un piloto de 2 semanas en 1 cámara y 1 túnel antes de los 90 días de despliegue. Este plan, propuesto por el formulador, ordena qué supuesto se comprueba, con qué evidencia y quién de Altamar lo aprueba.</p>
+      </div>
+      <div class="pilot">
+        <div class="pilot-time" aria-label="Secuencia del piloto">
+          <div style="flex:2"><b>Días 1-2</b>Instalación de sondas y sensor de puerta, calibración y pruebas de red</div>
+          <div style="flex:10"><b>Días 3-12</b>Operación en paralelo con el registro manual actual, más pruebas controladas de alarma</div>
+          <div style="flex:2"><b>Días 13-14</b>Análisis, informe y decisión</div>
+        </div>
+        <div class="dm-wrap">
+          <table class="ptable">
+            <thead><tr><th scope="col">Supuesto del proyecto</th><th scope="col">Valor usado</th><th scope="col">Cómo se valida</th><th scope="col">Evidencia</th><th scope="col">Aprueba</th></tr></thead>
+            <tbody>
+              <tr><td>Registro continuo, sin vacíos nocturnos</td><td>Cada 1 min</td><td>Comparar lecturas recibidas con las esperadas: 1,440 por sonda y día</td><td>Exportación del historial de ThingsBoard</td><td>Jefe de frío</td></tr>
+              <tr><td>Alerta temprana</td><td>&lt; 5 min</td><td>Pruebas controladas de puerta abierta y de sonda desconectada</td><td>Registro de alertas con sello de tiempo</td><td>Jefe de frío y Aseguramiento de la Calidad</td></tr>
+              <tr><td>Exactitud de la medición</td><td>PT100 clase A, ±0.15&nbsp;°C</td><td>Contraste con termómetro patrón con calibración trazable a INACAL</td><td>Certificado y acta de contraste</td><td>Aseguramiento de la Calidad</td></tr>
+              <tr><td>Horas-hombre en registro manual</td><td>≈ 5 HH/día · S/ 1,500/mes</td><td>Medir el tiempo actual de registro, transcripción y armado de reportes</td><td>Hoja de tiempos por turno</td><td>Aseguramiento de la Calidad</td></tr>
+              <tr><td>Pérdidas por cadena de frío y rechazos</td><td>S/ 2,500 y S/ 2,000/mes (valor esperado)</td><td>Revisar el historial de incidentes, mermas, reclamos y rechazos</td><td>Registros internos de calidad</td><td>Gerencia de planta</td></tr>
+              <tr><td>Factura de refrigeración y ahorro</td><td>≈ S/ 100,000/mes · 2&nbsp;%</td><td>Revisar 12 meses de facturas; la medición por equipo llega con el módulo de energía</td><td>Facturas eléctricas</td><td>Mantenimiento y Contabilidad</td></tr>
+              <tr><td>Número de compresores de NH3</td><td>4 (supuesto)</td><td>Inventario en la sala de máquinas</td><td>Acta de visita técnica</td><td>Jefe de mantenimiento</td></tr>
+              <tr><td>Precios de equipos</td><td>Referenciales, sin IGV</td><td>Tres cotizaciones por partida</td><td>Cotizaciones de proveedores</td><td>Compras</td></tr>
+              <tr><td>COK y OPEX</td><td>12&nbsp;% · S/ 9,600/año</td><td>Confirmar con el área financiera de Altamar</td><td>WACC y presupuesto de operación</td><td>Gerencia financiera</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gate">
+          <h4>Criterio de decisión para pasar al despliegue de 90 días</h4>
+          <ul>
+            <li>El historial del piloto no muestra vacíos nocturnos de registro.</li>
+            <li>Todas las pruebas controladas generan la alerta en menos de 5 minutos.</li>
+            <li>Las lecturas quedan dentro de la tolerancia del certificado de calibración.</li>
+            <li>Con los datos reales, el simulador B mantiene VAN positivo y TIR mayor que el COK confirmado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 5. EVIDENCIAS -->
 <section class="section" id="evidencias" aria-labelledby="t-evid" style="background:var(--ice-2)">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="num">05</span><p class="eyebrow">Galería de evidencias</p><h2 id="t-evid">Lo que respalda cada cifra</h2></div>
+      <div><span class="num">06</span><p class="eyebrow">Galería de evidencias</p><h2 id="t-evid">Lo que respalda cada cifra</h2></div>
       <p class="lead">Las evidencias del proyecto se generan a partir de los entregables originales. Las fotografías son referenciales, de licencia libre, y no corresponden a la planta de Altamar.</p>
     </div>
     <div class="filters" role="group" aria-label="Filtrar evidencias">
@@ -664,7 +860,7 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
 <section class="section" id="competencias" aria-labelledby="t-comp">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="num">06</span><p class="eyebrow">Competencias y alcance</p><h2 id="t-comp">Capacidad profesional demostrada</h2></div>
+      <div><span class="num">07</span><p class="eyebrow">Competencias y alcance</p><h2 id="t-comp">Capacidad profesional demostrada</h2></div>
       <p class="lead">El proyecto integra estrategia, ingeniería de automatización, arquitectura de software y evaluación financiera en una sola línea de razonamiento.</p>
     </div>
     <div class="comp">
@@ -690,7 +886,7 @@ main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.ri
 <section class="section contact" id="contacto" aria-labelledby="t-contacto">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="num">07</span><p class="eyebrow">Contacto y datos de la empresa</p><h2 id="t-contacto">Conversemos el siguiente paso</h2></div>
+      <div><span class="num">08</span><p class="eyebrow">Contacto y datos de la empresa</p><h2 id="t-contacto">Conversemos el siguiente paso</h2></div>
       <p class="lead">Primer paso recomendado: validar en planta la brecha de monitoreo y trazabilidad, y ejecutar el piloto de 2 semanas en 1 cámara y 1 túnel.</p>
     </div>
     <div class="cgrid">
@@ -995,7 +1191,7 @@ const COMP={
  z_mue:{zone:1,n:'Muelle de recepción',L:0,fn:'Recepción de materia prima de 20 embarcaciones propias y más de 200 artesanales; balanza de plataforma existente.',src:'Datos de la empresa · Data Map, datos 4, 5 y 7'}
 };
 const LAYERS=[
- {t:'1 · PERCEPCIÓN + PLANTA',c:25400},
+ {t:'1 · PERCEPCIÓN',c:25400},
  {t:'2 · CONECTIVIDAD',c:14950},
  {t:'3 · PROCESAMIENTO',c:9200},
  {t:'4 · APLICACIÓN',c:13200}
@@ -1028,8 +1224,8 @@ function plateBase(i){
   let g=box(0,0,-6,420,200,6,COL.plate);
   for(let x=30;x<420;x+=30)g+=line([x,0,0],[x,200,0],'',`stroke="rgba(127,211,220,.09)"`);
   for(let y=40;y<200;y+=40)g+=line([0,y,0],[420,y,0],'',`stroke="rgba(127,211,220,.09)"`);
-  const a=P(6,200,-6);
-  g+=`<g transform="translate(${(a[0]+2).toFixed(1)},${(a[1]+14).toFixed(1)}) rotate(30)"><text class="ptitle" x="0" y="0">${LAYERS[i].t}</text><text class="pcost" x="0" y="14">${money(LAYERS[i].c)}</text></g>`;
+  const v=P(0,200,-3);
+  g+=`<line x1="-186" y1="${(v[1]-4).toFixed(1)}" x2="${(v[0]-3).toFixed(1)}" y2="${v[1].toFixed(1)}" stroke="rgba(127,211,220,.55)"/><circle cx="${v[0].toFixed(1)}" cy="${v[1].toFixed(1)}" r="2.5" fill="#7FD3DC"/><text class="ptitle" x="-190" y="${(v[1]-6).toFixed(1)}" text-anchor="end">${LAYERS[i].t}</text><text class="pcost" x="-190" y="${(v[1]+8).toFixed(1)}" text-anchor="end">${money(LAYERS[i].c)}</text>`;
   return g;
 }
 const sc=[];
@@ -1114,7 +1310,7 @@ const packets=[];
 Object.keys(CHAINS).forEach(m=>CHAINS[m].forEach((ch,k)=>{for(let r=0;r<2;r++){const e=document.createElementNS(NS,'circle');e.setAttribute('r','3.4');e.setAttribute('fill',WIRE[m]);e.setAttribute('stroke','#0B2545');e.setAttribute('stroke-width','1');packG.appendChild(e);packets.push({e,m,ch,ph:(k*0.21+r*0.5)%1});}}));
 
 /* ---------- estado y cámara ---------- */
-const VB={cx:95,cy:-22};
+const VB={cx:42.5,cy:-22};
 const st={gap:104,gT:104,s:.82,sT:1,fyL:-1,enter:RM?1:0,mx:0,my:0,mxT:0,myT:0,step:0,filter:'all',on:false,last:0,t:0,tour:null,pin:null,started:false};
 const offs=[0,0,0,0].map(()=>({x:0,y:0}));
 function plateOffset(i){return offs[i];}
@@ -1139,7 +1335,8 @@ function frame(ts){
   const L=STEPS[st.step].L;
   const fy=L>=0?155-L*st.gap-22:(310-3*st.gap-40)/2;
   const ty=(st.cy=st.cy===undefined?fy:st.cy+(fy-st.cy)*k);
-  cam.setAttribute('transform',`translate(${VB.cx} ${VB.cy}) scale(${st.s.toFixed(4)}) translate(${-95} ${(-ty).toFixed(2)})`);
+  const fxT=L>=0?60:12;st.cx=st.cx===undefined?fxT:st.cx+(fxT-st.cx)*k;
+  cam.setAttribute('transform',`translate(${VB.cx} ${VB.cy}) scale(${st.s.toFixed(4)}) translate(${(-st.cx).toFixed(2)} ${(-ty).toFixed(2)})`);
   // cables
   const wireVis=st.enter>0.85;
   CON.forEach((c,i)=>{const A=scr(...c[0]),B=scr(...c[1]);const mx=(A[0]+B[0])/2,my=(A[1]+B[1])/2-18;
@@ -1177,7 +1374,7 @@ function setStep(i){
   st.step=i;
   $$s('.vstep').forEach((b,k)=>b.setAttribute('aria-pressed',k===i));
   plates.forEach((p,k)=>p.classList.toggle('show-lbl',i>=1&&i<=4&&k===i-1));
-  st.sT=i>=1&&i<=4?1.42:(st.gT<80?1.12:1);
+  st.sT=i>=1&&i<=4?1.42:1;
   filt.hidden=i!==5;
   clearPin();stepInfo();
 }
@@ -1195,7 +1392,7 @@ svg.querySelectorAll('.hs').forEach(h=>{
 });
 filt.querySelectorAll('[data-m]').forEach(b=>b.addEventListener('click',()=>{filt.querySelectorAll('[data-m]').forEach(x=>x.setAttribute('aria-pressed',x===b));st.filter=b.dataset.m;stepInfo();}));
 const exB=document.getElementById('v-explode');
-exB.addEventListener('click',()=>{const on=exB.getAttribute('aria-pressed')!=='true';exB.setAttribute('aria-pressed',on);exB.textContent=on?'Despiece':'Ensamblado';st.gT=on?104:60;if(!(st.step>=1&&st.step<=4))st.sT=on?1:1.12;});
+exB.addEventListener('click',()=>{const on=exB.getAttribute('aria-pressed')!=='true';exB.setAttribute('aria-pressed',on);exB.textContent=on?'Despiece':'Ensamblado';st.gT=on?104:60;});
 document.getElementById('v-reset').addEventListener('click',()=>{stopTour();setStep(0);});
 const tourB=document.getElementById('v-tour'),tourTxt=document.getElementById('v-tour-txt'),tourIco=document.getElementById('v-tour-ico');
 function stopTour(){if(st.tour){clearInterval(st.tour);st.tour=null;tourB.setAttribute('aria-pressed','false');tourTxt.textContent='Recorrido guiado';tourIco.setAttribute('d','M7 4l13 8-13 8z');}}
@@ -1216,6 +1413,108 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
 io.observe(stage);
 setStep(0);
 for(let i=0;i<4;i++)plates[i].style.opacity=RM?1:0;
+})();
+
+</script>
+<script>
+(function(){
+'use strict';
+const $=s=>document.querySelector(s);
+const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const money=n=>(n<0?'-':'')+'S/ '+Math.round(Math.abs(n)).toLocaleString('en-US');
+const pct=v=>(v*100).toFixed(1)+' %';
+
+/* ===== A. Línea de tiempo del incidente ===== */
+const EV=[
+ {m:0,l:'iot',t:'Puerta abierta',d:'El sensor magnético registra la apertura con sello de tiempo.'},
+ {m:3,l:'iot',t:'Alarma de puerta',d:'Supera 3 min abierta: baliza en antecámara y aviso por Telegram/SMS al operador.'},
+ {m:18,l:'iot',t:'Escalamiento completo',d:'Sin respuesta, la alerta ya llegó al jefe de frío y al gerente de planta (15 min).'},
+ {m:0,l:'man',t:'Puerta abierta',d:'Nadie lo registra: el estado de las puertas hoy no se captura.'},
+ {m:120,l:'man',t:'Primera lectura posible',d:'Si la ronda es cada 2 h, el operario lee y anota la temperatura.'},
+ {m:240,l:'man',t:'Última lectura del intervalo',d:'Con rondas cada 4 h, o en el turno siguiente si hay vacío nocturno.'}
+];
+const tIn=$('#inc-t'),clock=$('#inc-clock'),log=$('#inc-log');
+if(tIn){
+  const hh=m=>{const h=2+Math.floor(m/60),mm=m%60;return String(h).padStart(2,'0')+':'+String(mm).padStart(2,'0');};
+  const lanes={man:$('#lane-man .track'),iot:$('#lane-iot .track')};
+  // zona de detección manual (2 a 4 h)
+  const z=document.createElement('div');z.className='mk zone';z.style.left='50%';z.style.width='50%';z.style.margin='-10px 0 0 0';z.title='Ventana de la siguiente lectura manual';lanes.man.appendChild(z);
+  EV.forEach(e=>{const k=document.createElement('div');k.className='mk';k.style.left=(e.m/240*100)+'%';k.title=hh(e.m)+' · '+e.t;lanes[e.l].appendChild(k);e.mk=k;});
+  log.innerHTML=EV.slice().sort((a,b)=>a.m-b.m||(a.l==='iot'?-1:1)).map(e=>`<li class="${e.l}" data-m="${e.m}"><b>${hh(e.m)}</b><div><span class="who">${e.l==='iot'?'Con Cold-Chain 4.0':'Registro manual'}</span><br><strong>${e.t}.</strong> ${e.d}</div></li>`).join('');
+  const items=Array.from(log.children);
+  const stM=$('#st-man'),stI=$('#st-iot');
+  function draw(m){
+    clock.textContent=hh(m);tIn.setAttribute('aria-valuetext',hh(m));
+    ['man','iot'].forEach(l=>{const tr=lanes[l];tr.querySelector('.head').style.left=(m/240*100)+'%';});
+    lanes.man.querySelector('.fill').style.width=(m/240*100)+'%';
+    lanes.iot.querySelector('.fill').style.width=(Math.min(m,3)/240*100)+'%';
+    EV.forEach(e=>e.mk.classList.toggle('on',m>=e.m));
+    items.forEach(li=>li.classList.toggle('on',m>=+li.dataset.m));
+    stI.textContent=m<3?'Puerta abierta registrada · alarma en '+(3-m)+' min':'Detectado en 3 min · '+(m<18?'escalando la alerta':'responsables notificados');
+    stM.textContent=m<120?'Sin registro desde hace '+m+' min':(m<240?'Posible detección en la ronda (2-4 h)':'Detección en 2-4 h o en el turno siguiente');
+  }
+  let raf=null,t0=0,from=0;
+  const pb=$('#inc-play'),ptx=$('#inc-play-txt'),pic=$('#inc-ico');
+  function stop(){if(raf)cancelAnimationFrame(raf);raf=null;ptx.textContent='Reproducir';pic.setAttribute('d','M7 4l13 8-13 8z');}
+  function step(ts){if(!t0)t0=ts;const m=Math.min(240,Math.round(from+(ts-t0)/1000*24));tIn.value=m;draw(m);if(m<240)raf=requestAnimationFrame(step);else stop();}
+  pb.addEventListener('click',()=>{if(raf){stop();return;}if(RM){tIn.value=240;draw(240);return;}from=+tIn.value>=240?0:+tIn.value;t0=0;ptx.textContent='Pausar';pic.setAttribute('d','M6 4h4v16H6zM14 4h4v16h-4z');raf=requestAnimationFrame(step);});
+  tIn.addEventListener('input',()=>{stop();draw(+tIn.value);});
+  draw(0);
+}
+
+/* ===== B. Simulador financiero (hoja Payback y ROI) ===== */
+const INV=132385,OPEX=9600,RAMP=3,RAMPPCT=0.5;
+function calc(b,share,r){
+  const I=INV*share;
+  const cf=[-I,b*(RAMP*RAMPPCT+(12-RAMP)),12*b-OPEX,12*b-OPEX];
+  const npvAt=k=>cf.reduce((s,v,t)=>s+v/Math.pow(1+k,t),0);
+  const van=npvAt(r);
+  let tir=null;let lo=-0.99,hi=50;
+  if(npvAt(lo)*npvAt(hi)<0){for(let i=0;i<200;i++){const mid=(lo+hi)/2;if(npvAt(lo)*npvAt(mid)<=0)hi=mid;else lo=mid;}tir=(lo+hi)/2;}
+  const pvB=van+I;
+  let cum=-I,pd=null;const cumD=[-I];
+  for(let t=1;t<=3;t++){const d=cf[t]/Math.pow(1+r,t);if(pd===null&&d>0&&cum+d>=0)pd=(t-1)*12+(-cum/d)*12;cum+=d;cumD.push(cum);}
+  const ps=b>0?I/b:Infinity;
+  return {I,cf,van,tir,ir:pvB/I,ps,pd,cumD,roi:(36*b-I)/I};
+}
+const iB=$('#i-b'),iR=$('#i-r');
+if(iB){
+  const fondo=()=>+document.querySelector('input[name=fondo]:checked').value;
+  const fmtM=v=>v===null||!isFinite(v)?'> 36 meses':v.toFixed(1)+' meses';
+  function chart(res){
+    const W=560,H=270,top=44,bot=36,mid0=H-bot,vals=res.cf.concat(res.cumD),mx=Math.max(...vals.map(Math.abs)),
+      max=Math.max(...vals,1),min=Math.min(...vals,-1),sc=(H-top-bot)/(max-min),y0=top+max*sc,xs=[70,190,310,430],bw=64;
+    let g=`<line x1="30" y1="${y0}" x2="${W-10}" y2="${y0}" stroke="#94A6B4"/>`;
+    res.cf.forEach((v,i)=>{const h=Math.abs(v)*sc,y=v<0?y0:y0-h;g+=`<rect x="${xs[i]-bw/2}" y="${y.toFixed(1)}" width="${bw}" height="${Math.max(1,h).toFixed(1)}" rx="4" fill="${v<0?'#B5531A':'#0B6E79'}"/><text x="${xs[i]}" y="${(v<0?y0+h+14:y-6).toFixed(1)}" text-anchor="middle" class="svg-h" style="font-size:12px">${money(v)}</text><text x="${xs[i]}" y="${H-6}" text-anchor="middle" class="svg-t">Año ${i}</text>`;});
+    const pts=res.cumD.map((v,i)=>[xs[i]+bw/2+10,y0-v*sc]);
+    g+=`<polyline points="${pts.map(p=>p.map(n=>n.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="#0B2545" stroke-width="2" stroke-dasharray="5 4"/>`;
+    pts.forEach(p=>g+=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="4" fill="#0B2545"/>`);
+    g+=`<text x="${W-10}" y="14" text-anchor="end" class="svg-t" style="fill:#0B2545">- - flujo acumulado descontado al COK</text>`;
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Flujo de caja anual y flujo acumulado descontado">${g}</svg>`;
+  }
+  function upd(){
+    const b=+iB.value,r=+iR.value/100,res=calc(b,fondo(),r);
+    $('#o-b').textContent=money(b);$('#o-r').textContent=(+iR.value).toFixed(1)+' %';
+    $('#c-i').textContent=money(res.I);$('#c-ps').textContent=fmtM(res.ps);$('#c-pd').textContent=fmtM(res.pd);
+    $('#c-van').textContent=money(res.van);$('#c-tir').textContent=res.tir===null?'No calculable':pct(res.tir);$('#c-ir').textContent=res.ir.toFixed(2);
+    const acc=res.van>0&&res.tir!==null&&res.tir>r;
+    let band,cls;
+    if(res.ps<12){band='MUY RENTABLE';cls='ok';}else if(res.ps<=24){band='RENTABLE';cls='ok';}else if(res.ps<=36){band='MARGINAL';cls='mid';}else{band='POCO ATRACTIVO';cls='bad';}
+    if(!acc)cls='bad';
+    const v=$('#c-verdict');v.className='verdict '+cls;
+    v.innerHTML=`<b>${band} · ${acc?'ACEPTAR: VAN &gt; 0 y TIR &gt; COK':'REVISAR: no supera el COK en 3 años'}</b>Franja según la escala de la plantilla (payback simple). ROI a 3 años sobre el aporte propio: ${(res.roi*100).toFixed(0)} %.`;
+    $('#c-chart').innerHTML=chart(res);
+  }
+  const PRE={base:[9000,'1',12],pes:[4500,'1',12],gran:[9000,'0.5',12]};
+  document.querySelectorAll('[data-p]').forEach(bt=>bt.addEventListener('click',()=>{
+    const p=PRE[bt.dataset.p];iB.value=p[0];document.querySelector(`input[name=fondo][value="${p[1]}"]`).checked=true;iR.value=p[2];
+    document.querySelectorAll('[data-p]').forEach(x=>x.setAttribute('aria-pressed',x===bt));upd();}));
+  const unpress=()=>document.querySelectorAll('[data-p]').forEach(x=>x.setAttribute('aria-pressed','false'));
+  [iB,iR].forEach(el=>el.addEventListener('input',()=>{unpress();upd();}));
+  document.querySelectorAll('input[name=fondo]').forEach(el=>el.addEventListener('change',()=>{unpress();upd();}));
+  upd();
+  window.__calc=calc;
+}
 })();
 
 </script>
