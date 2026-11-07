@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Altamar Cold-Chain 4.0 · Portafolio de proyecto</title>
+<meta name="author" content="Ing. Enrique Francisco Flores Gallo">
+<meta name="description" content="Portafolio del proyecto Altamar Cold-Chain 4.0: plataforma IoT industrial edge para cadena de frío, trazabilidad por lote y eficiencia energética en ALTAMAR FOODS PERU S.R.L.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2545; --navy-2:#13315C; --ink:#13202B; --muted:#4A5865; --line:#D5E0E7;
+  --ice:#EEF4F7; --ice-2:#F6F9FB; --teal:#0B6E79; --teal-2:#08525A; --teal-soft:#DDF0F2;
+  --sky:#7FD3DC; --warn:#B5531A; --warn-soft:#FBEDE4; --white:#FFFFFF;
+  --radius:14px; --shadow:0 1px 2px rgba(11,37,69,.06),0 8px 24px rgba(11,37,69,.08);
+  --display:'Space Grotesk',Inter,system-ui,sans-serif; --body:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--teal)}a:hover{color:var(--teal-2)}
+h1,h2,h3,h4{font-family:var(--display);color:var(--navy);line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.section{padding:96px 0;border-top:1px solid var(--line)}
+.section-head{display:block;max-width:880px;margin-bottom:44px}
+.section-head h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.015em;margin-bottom:18px}
+.section-head .lead{color:var(--muted);font-size:17.5px;line-height:1.65;max-width:72ch}
+.num{font-family:var(--display);font-size:14px;color:var(--muted);display:block;margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;font-family:var(--body)}
+.btn-primary{background:var(--sky);color:var(--navy)}.btn-primary:hover{background:#A6E2E8;color:var(--navy)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff;background:transparent}.btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--ice);color:var(--navy)}
+.tag.alta{background:var(--warn-soft);color:#8A3A10}
+.tag.teal{background:var(--teal-soft);color:var(--teal-2)}
+.note{font-size:13px;color:var(--muted)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,37,69,.96);backdrop-filter:saturate(1.4) blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:64px}
+.brand{font-family:var(--display);font-weight:700;font-size:17px;color:#fff;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--sky)}
+.nav-links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:#C9D6E2;text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.08)}
+.progress{position:absolute;left:0;bottom:0;height:3px;background:var(--sky);width:0}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;min-height:44px;min-width:44px;cursor:pointer}
+@media (max-width:860px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .nav-links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--navy);padding:8px 16px 16px;display:none}
+  .nav-links.open{display:flex}
+}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;padding-top:88px;padding-bottom:88px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(42px,6.4vw,80px);letter-spacing:-.025em;margin:14px 0 18px}
+.hero .line{font-size:18px;color:#C9D6E2;max-width:620px}
+.hero .eyebrow{color:var(--sky)}
+.value{margin-top:30px;padding:22px 24px;border-left:3px solid var(--sky);background:rgba(255,255,255,.04)}
+.value p:first-child{font-family:var(--display);font-size:clamp(21px,2.4vw,27px);line-height:1.25;color:#fff;font-weight:600}
+.value p+p{margin-top:10px;color:#C9D6E2;font-size:15.5px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{margin-top:26px;font-size:13.5px;color:#B9C8D6}
+.hero-panel{background:var(--navy-2);border:1px solid #2E4A6B;border-radius:20px;padding:22px}
+.hero-panel h2{color:#fff;font-size:15px;font-family:var(--body);font-weight:600;letter-spacing:.02em;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid #2E4A6B;border-radius:12px;padding:14px}
+.kpi .k{font-size:12.5px;color:#B9C8D6}
+.kpi .v{white-space:nowrap;font-family:var(--display);font-size:clamp(20px,2.4vw,28px);font-weight:700;color:#fff;line-height:1.15;margin:4px 0 2px}
+.kpi .s{font-size:12.5px;color:#B9C8D6}
+.kpi.hl{background:var(--sky);border-color:var(--sky)}
+.kpi.hl .k,.kpi.hl .s{color:#123}.kpi.hl .v{color:var(--navy)}
+.baseline{display:flex;gap:10px;margin-top:10px}
+.baseline div{flex:1;border:1px dashed #3E5C7E;border-radius:12px;padding:12px 14px;font-size:12.5px;color:#B9C8D6}
+.baseline strong{display:block;font-family:var(--display);color:#fff;font-size:20px}
+@media (max-width:480px){.kpis{grid-template-columns:1fr}.kpi.hl{grid-column:auto!important}}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:56px}}
+
+/* RESUMEN */
+.summary{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px}
+.summary-text p{font-size:clamp(17.5px,1.7vw,20px);line-height:1.65;color:var(--ink)}
+.summary-text p strong{color:var(--navy)}
+.factsheet{border:1px solid var(--line);border-radius:var(--radius);padding:6px 22px}
+.factsheet dl{margin:0}
+.factsheet div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.factsheet div:last-child{border-bottom:0}
+.factsheet dt{color:var(--muted)}.factsheet dd{margin:0;font-weight:500}
+.chain{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;align-items:center}
+.chain span{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:10px;background:var(--ice);color:var(--navy)}
+.chain i{font-style:normal;color:var(--muted)}
+@media (max-width:860px){.summary{grid-template-columns:1fr}}
+
+/* PROYECTO: tarjetas */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:600;font-size:14px;cursor:pointer;font-family:var(--body)}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{position:relative;text-align:left;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;cursor:pointer;font:inherit;color:inherit;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#B8CBD7}
+.card .idx{font-family:var(--display);font-size:48px;font-weight:700;color:var(--teal-soft);line-height:1;-webkit-text-stroke:1px var(--teal)}
+.card h3{font-size:22px}
+.card p{color:var(--muted);font-size:14.5px}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.card .row b{font-family:var(--display);font-size:22px;color:var(--navy)}
+.card .row span{font-size:13px;color:var(--muted)}
+.card .more{font-size:14px;font-weight:600;color:var(--teal)}
+.card.dim{opacity:.35;transform:none}
+.layers-mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.layers-mini span{height:6px;border-radius:3px;background:var(--teal)}
+.datamap{margin-top:40px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.datamap-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center;padding:18px 22px;background:var(--ice-2);border-bottom:1px solid var(--line)}
+.datamap-head h3{font-size:19px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.dm-table{width:100%;border-collapse:collapse;font-size:14px}
+.dm-wrap{overflow-x:auto}
+.dm-table th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.dm-table td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.dm-table tr:last-child td{border-bottom:0}
+.dm-table tr.on{background:#F3FAFB}
+.dm-table td.n{font-family:var(--display);font-weight:700;color:var(--navy)}
+.lvl{display:inline-flex;gap:3px}.lvl i{width:12px;height:8px;border-radius:2px;background:var(--line)}.lvl i.f{background:var(--warn)}
+.cov{font-size:12.5px;font-weight:600;color:var(--teal-2)}
+.cov.no{color:var(--muted);font-weight:500}
+@media (max-width:980px){.cards{grid-template-columns:1fr}}
+
+/* DIALOG */
+dialog{border:0;padding:0;border-radius:20px;max-width:880px;width:calc(100% - 32px);max-height:calc(100vh - 48px);box-shadow:0 30px 80px rgba(11,37,69,.35);color:var(--ink)}
+dialog::backdrop{background:rgba(11,37,69,.55)}
+.dlg-head{position:sticky;top:0;background:var(--navy);color:#fff;padding:24px 28px;display:flex;gap:16px;align-items:flex-start;justify-content:space-between;z-index:1}
+.dlg-head h3{color:#fff;font-size:24px}
+.dlg-head p{color:#C9D6E2;font-size:14px;margin-top:6px}
+.close{min-width:44px;min-height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;font-size:20px}
+.dlg-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:22px}
+.dlg-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.dlg-kpis div{background:var(--ice);border-radius:12px;padding:12px 14px;font-size:12.5px;color:var(--muted)}
+.dlg-kpis b{display:block;font-family:var(--display);font-size:20px;color:var(--navy)}
+.layer{display:grid;grid-template-columns:150px minmax(0,1fr) 100px;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.layer h4{font-size:15px}
+.layer .cost{font-family:var(--display);font-weight:700;color:var(--navy);text-align:right}
+.layer p{font-size:14px;color:var(--ink)}
+.layer p+p{color:var(--muted);margin-top:6px;font-size:13.5px}
+.risk{background:var(--warn-soft);border-radius:12px;padding:14px 16px;font-size:14px}
+.risk b{color:#8A3A10}
+@media (max-width:640px){.layer{grid-template-columns:1fr;gap:6px}.layer .cost{text-align:left}.dlg-kpis{grid-template-columns:1fr}}
+
+/* DESARROLLO */
+.stepper{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px}
+.step{min-height:64px;background:#fff;border:0;border-right:1px solid var(--line);padding:12px 14px;text-align:left;cursor:pointer;font-family:var(--body);color:var(--muted)}
+.step:last-child{border-right:0}
+.step b{display:block;font-family:var(--display);font-size:16px;color:var(--navy)}
+.step small{font-size:12.5px}
+.step[aria-selected="true"]{background:var(--navy);color:#B9C8D6}
+.step[aria-selected="true"] b{color:#fff}
+.panel{display:none}.panel.active{display:block}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.box{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.box h3{font-size:20px;margin-bottom:12px}
+.box ul{margin:0;padding-left:18px}.box li{margin:6px 0;font-size:15px}
+.stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.stat{background:var(--ice);border-radius:12px;padding:14px}
+.stat b{display:block;font-family:var(--display);font-size:26px;color:var(--navy)}
+.stat span{font-size:13px;color:var(--muted)}
+.timeline{display:grid;grid-template-columns:30fr 45fr 15fr;gap:6px;margin-top:14px}
+.timeline div{background:var(--teal);color:#fff;border-radius:8px;padding:10px 12px;font-size:13px}
+.timeline div:nth-child(2){background:var(--navy)}.timeline div:nth-child(3){background:var(--warn)}
+.timeline b{display:block;font-family:var(--display);font-size:16px}
+.stack{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.stack .box h3{font-size:17px}
+.stack .box p{font-size:14px;color:var(--muted)}
+.stack .box .ln{display:block;font-family:var(--display);font-size:13px;color:var(--teal);font-weight:700;margin-bottom:6px}
+.results{display:grid;gap:12px}
+details.res{border:1px solid var(--line);border-radius:14px;background:#fff}
+details.res summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:16px;align-items:center;padding:18px 20px;min-height:44px}
+details.res summary::-webkit-details-marker{display:none}
+details.res summary .rn{font-family:var(--display);font-weight:700;color:var(--teal);font-size:18px}
+details.res summary h3{font-size:18px}
+details.res summary .val{font-family:var(--display);font-weight:700;color:var(--navy);white-space:nowrap}
+details.res[open] summary{border-bottom:1px solid var(--line)}
+.acari{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0}
+.acari div{padding:16px 18px;border-right:1px solid var(--line);font-size:14px}
+.acari div:last-child{border-right:0;background:var(--teal-soft)}
+.acari b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-2);margin-bottom:6px}
+.chart-box{border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.chart-box h3{font-size:18px;margin-bottom:4px}
+.chart-box .note{margin-bottom:12px}
+@media (max-width:980px){.stepper{grid-template-columns:repeat(2,minmax(0,1fr))}.step{border-bottom:1px solid var(--line)}.two{grid-template-columns:1fr}.stack{grid-template-columns:repeat(2,minmax(0,1fr))}.acari{grid-template-columns:1fr}.acari div{border-right:0;border-bottom:1px solid var(--line)}}
+@media (max-width:560px){.stack{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}}
+
+/* GALERÍA */
+.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.fig{grid-column:span 4;margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.fig.wide{grid-column:span 6}
+.fig.full{grid-column:span 12}
+.fig.full button.open{aspect-ratio:auto}
+.fig button.open{border:0;padding:0;background:var(--ice-2);cursor:zoom-in;display:block;width:100%;aspect-ratio:4/3;overflow:hidden}
+.fig button.open img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.fig button.open:hover img{transform:scale(1.03)}
+.fig button.open svg{width:100%;height:100%}
+.fig figcaption{padding:14px 16px;font-size:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.fig figcaption b{font-family:var(--display);color:var(--navy);font-size:15.5px}
+.fig figcaption .src{font-size:12.5px;color:var(--muted);margin-top:auto}
+.fig .kind{position:absolute}
+.fallback{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px;color:var(--muted);font-size:13.5px;background:repeating-linear-gradient(45deg,#F2F6F8,#F2F6F8 10px,#EAF0F3 10px,#EAF0F3 20px)}
+@media (max-width:980px){.fig,.fig.wide{grid-column:span 6}.fig.full{grid-column:span 12}}
+@media (max-width:620px){.fig,.fig.wide,.fig.full{grid-column:span 12}}
+.lightbox{max-width:1100px;background:#0B1624}
+.lightbox .lb-body{padding:0;background:#fff;display:flex;justify-content:center;align-items:center;max-height:calc(100vh - 200px);overflow:auto}
+.lightbox .lb-body img{max-height:calc(100vh - 200px);width:auto;max-width:100%}
+.lightbox .lb-body svg{width:100%;max-width:900px;height:auto}
+.lb-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;background:var(--navy);color:#C9D6E2;font-size:14px}
+.lb-foot button{min-height:44px;min-width:44px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;font-size:18px}
+
+/* COMPETENCIAS */
+.comp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.comp .box{display:flex;flex-direction:column;gap:12px}
+.comp .ico{width:44px;height:44px;border-radius:12px;background:var(--teal-soft);display:flex;align-items:center;justify-content:center;color:var(--teal)}
+.comp .box ul{list-style:none;padding:0}
+.comp .box li{font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.diff{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.diff div{padding:20px;border-radius:14px;background:var(--navy);color:#C9D6E2;font-size:14.5px}
+.diff b{display:block;color:#fff;font-family:var(--display);font-size:17px;margin-bottom:6px}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.scope .box h3{font-size:17px;display:flex;gap:8px;align-items:center}
+@media (max-width:980px){.comp{grid-template-columns:repeat(2,minmax(0,1fr))}.diff,.scope{grid-template-columns:1fr}}
+@media (max-width:560px){.comp{grid-template-columns:1fr}}
+
+/* CONTACTO */
+.contact{background:var(--navy);color:#C9D6E2}
+.contact .section-head h2,.contact h3{color:#fff}
+.contact .lead{color:#C9D6E2}
+.contact .eyebrow{color:var(--sky)}
+.contact .num{color:#8FA6BC}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:20px}
+.cbox{border:1px solid #2E4A6B;border-radius:18px;padding:26px;background:var(--navy-2)}
+.cbox h3{font-size:20px;margin-bottom:16px}
+.cbox dl{margin:0}
+.cbox dl div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid #2E4A6B;font-size:14.5px}
+.cbox dl div:last-child{border-bottom:0}
+.cbox dt{color:#8FA6BC}.cbox dd{margin:0;color:#fff;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.copy{min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #3E5C7E;background:transparent;color:var(--sky);font-size:13px;cursor:pointer;font-family:var(--body)}
+.contact a{color:var(--sky)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+footer.foot{background:#071A31;color:#8FA6BC;font-size:13px;padding:28px 0}
+footer.foot .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr}.cbox dl div{grid-template-columns:1fr;gap:2px}}
+
+/* SVG chart text */
+.svg-t{font-family:var(--body);fill:var(--muted);font-size:12px}
+.svg-h{font-family:var(--display);fill:var(--navy);font-weight:700}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 18px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:100}
+.toast.show{opacity:1}
+
+/* ===== Párrafos: justificación coherente ===== */
+main p:not(.eyebrow):not(.hero-meta),main li,.hero .line,.value p+p,.layer p,.risk,.acari div,.diff div,.fig figcaption>span:not(.src):not(.tag),.vinfo p,.vread td{
+  text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;text-align-last:left;overflow-wrap:break-word}
+.value p:first-child,.eyebrow,.hero-meta,.note.center{text-align:left;-webkit-hyphens:manual;hyphens:manual}
+.box p+p,.box p+ul,.box ul+p{margin-top:12px}
+.box li{line-height:1.6}
+.card p{line-height:1.6}
+.summary-text p{line-height:1.65}
+.fig figcaption{gap:8px}
+.factsheet dd,.cbox dd{line-height:1.5}
+
+/* ===== Visualización isométrica ===== */
+.viz-sec{background:var(--navy);color:#C9D6E2}
+.viz-sec .section-head h2,.viz-sec h3{color:#fff}
+.viz-sec .section-head .lead{color:#C9D6E2}
+.viz-sec .eyebrow{color:var(--sky)}
+.viz-sec .num{color:#8FA6BC}
+.viz{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;align-items:start}
+.stage{position:relative;border:1px solid #2E4A6B;border-radius:20px;overflow:hidden;background:#0A2140}
+.stage::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 42%,rgba(127,211,220,.10),transparent 70%);pointer-events:none}
+#iso-svg{display:block;width:100%;height:min(80vh,820px);touch-action:pan-y}
+.viz [hidden]{display:none!important}
+.stage-bar{position:absolute;top:14px;left:14px;right:14px;display:flex;flex-wrap:wrap;gap:8px;z-index:2}
+.sbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid #3E5C7E;background:rgba(11,37,69,.85);color:#fff;font:600 13.5px var(--body);cursor:pointer}
+.sbtn:hover{border-color:var(--sky)}
+.sbtn[aria-pressed="true"]{background:var(--sky);border-color:var(--sky);color:var(--navy)}
+.stage-legend{position:relative;padding:0 14px 14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:12.5px;color:#C9D6E2;z-index:2;pointer-events:none}
+.stage-legend span.item{display:inline-flex;align-items:center;gap:6px;background:rgba(7,26,49,.8);padding:6px 10px;border-radius:8px}
+.vtag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:6px;text-transform:uppercase}
+.vtag.doc{background:var(--teal-soft);color:var(--teal-2)}
+.vtag.con{border:1px dashed var(--sky);color:var(--sky)}
+.vtag.lay{background:#24497A;color:#fff}
+.vpanel{display:flex;flex-direction:column;gap:14px}
+.vsteps{display:grid;grid-template-columns:1fr;gap:6px}
+.vstep{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:center;text-align:left;min-height:52px;padding:8px 14px;border-radius:12px;border:1px solid #2E4A6B;background:transparent;color:#C9D6E2;cursor:pointer;font-family:var(--body)}
+.vstep b{font-family:var(--display);font-size:15px;color:#fff;display:block;line-height:1.2}
+.vstep small{font-size:12.5px;color:#8FA6BC}
+.vstep .n{width:30px;height:30px;border-radius:50%;border:1px solid #3E5C7E;display:flex;align-items:center;justify-content:center;font:700 13px var(--display);color:var(--sky)}
+.vstep[aria-pressed="true"]{background:var(--navy-2);border-color:var(--sky)}
+.vstep[aria-pressed="true"] .n{background:var(--sky);color:var(--navy);border-color:var(--sky)}
+.vinfo{border:1px solid #2E4A6B;border-radius:16px;background:var(--navy-2);padding:20px;min-height:250px}
+.vinfo h3{font-size:19px;margin:10px 0 8px}
+.vinfo p{font-size:14.5px;line-height:1.6;color:#D6E2EC}
+.vinfo .tags{display:flex;flex-wrap:wrap;gap:6px}
+.vinfo dl{margin:14px 0 0}
+.vinfo dl div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;padding:8px 0;border-top:1px solid #2E4A6B;font-size:13.5px}
+.vinfo dt{color:#8FA6BC}.vinfo dd{margin:0;color:#fff}
+.vfilter{display:flex;flex-wrap:wrap;gap:6px}
+.vfilter .sbtn:not([aria-pressed="true"]){background:transparent}
+.vread{margin-top:28px;border:1px solid #2E4A6B;border-radius:16px;background:rgba(255,255,255,.02)}
+.vread summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:44px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:600 16px var(--display);color:#fff}
+.vread summary::-webkit-details-marker{display:none}
+.vread summary::after{content:"+";font-size:22px;color:var(--sky)}
+.vread[open] summary::after{content:"–"}
+.vread .tw{overflow-x:auto;padding:0 22px 22px}
+.vread table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px}
+.vread th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#8FA6BC;padding:10px 12px;border-bottom:1px solid #2E4A6B}
+.vread td{padding:12px;border-bottom:1px solid #2E4A6B;vertical-align:top;color:#D6E2EC;line-height:1.55}
+.vread td:first-child{color:#fff;font-weight:600;text-align:left}
+.vread .ex{margin-top:14px;font-size:13px;color:#8FA6BC;text-align:justify}
+/* SVG */
+#iso-svg .hs{cursor:pointer;outline:none}
+#iso-svg .hs .body{transition:filter .2s}
+#iso-svg .hs:hover .body,#iso-svg .hs:focus-visible .body,#iso-svg .hs.sel .body{filter:url(#iso-glow)}
+#iso-svg .lbl{opacity:0;transition:opacity .35s ease;pointer-events:none}
+#iso-svg .show-lbl .lbl,#iso-svg .hs:hover .lbl,#iso-svg .hs:focus-visible .lbl,#iso-svg .hs.sel .lbl{opacity:1}
+#iso-svg .lbl rect{fill:rgba(7,26,49,.92);stroke:#3E6896}
+#iso-svg .lbl text{font:600 10.5px Inter,system-ui,sans-serif;fill:#fff}
+#iso-svg .lbl line{stroke:#7FD3DC;stroke-width:1}
+#iso-svg .ztxt{font:600 9.5px Inter,system-ui,sans-serif;fill:#C9D6E2;letter-spacing:.04em;pointer-events:none}
+#iso-svg .ptitle{font:700 11px 'Space Grotesk',Inter,sans-serif;fill:#7FD3DC;letter-spacing:.12em}
+#iso-svg .pcost{font:600 10.5px Inter,sans-serif;fill:#C9D6E2}
+#iso-svg .wire{fill:none;stroke-width:1.5;stroke-dasharray:3 6;animation:isoDash 1.1s linear infinite;opacity:.75}
+#iso-svg .wire.dim{opacity:.12}
+#iso-svg .pwire{stroke:#7FD3DC;stroke-opacity:.45;stroke-width:1.2;fill:none}
+#iso-svg .plate{transition:opacity .5s ease}
+#iso-svg .pop{opacity:0;transform-box:fill-box;transform-origin:50% 100%}
+#iso-svg.go .pop{animation:isoPop .6s cubic-bezier(.2,.9,.25,1.25) both}
+@keyframes isoPop{from{opacity:0;transform:translateY(-26px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes isoDash{to{stroke-dashoffset:-18}}
+@media (prefers-reduced-motion:reduce){#iso-svg .pop{opacity:1;animation:none!important}#iso-svg .wire{animation:none}}
+@media (max-width:1020px){.viz{grid-template-columns:1fr}.vsteps{grid-template-columns:repeat(2,minmax(0,1fr))}#iso-svg{height:min(72vh,680px)}}
+@media (max-width:560px){.vsteps{grid-template-columns:1fr}#iso-svg{height:520px}.stage-bar{position:static;padding:14px 14px 0}}
+@media print{.stage-bar,.vfilter{display:none!important}}
+
+@media print{.nav,.hero-actions,.filters,.copy,.toast{display:none!important}.section{padding:40px 0;break-inside:avoid}.panel{display:block!important}details.res{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones del portafolio">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Altamar <span>Cold-Chain 4.0</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="nav-links" id="navlinks">
+      <a href="#resumen">Resumen</a>
+      <a href="#proyecto">Proyecto</a>
+      <a href="#modelo">Modelo 3D</a>
+      <a href="#desarrollo">Desarrollo</a>
+      <a href="#evidencias">Evidencias</a>
+      <a href="#competencias">Competencias</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</nav>
+
+<!-- 1. PORTADA -->
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Portafolio de proyecto · Transformación digital · IoT industrial</p>
+      <h1>Altamar Cold-Chain 4.0</h1>
+      <p class="line">Plataforma IoT industrial <em>edge</em> para la cadena de frío, la trazabilidad de histamina por lote y la eficiencia energética de una planta exportadora de congelados.</p>
+      <div class="value">
+        <p>De anotar temperaturas cada 2-4 horas a detectar un desvío en menos de 5 minutos.</p>
+        <p>Protege 2 cámaras de 1,000 t y 12 túneles de congelación, decide en el muelle si cada lote de mahi mahi entra o se retiene, y convierte el cumplimiento BRCGS AA+ y SANIPES en evidencia automática. Se recupera en 15 a 19 meses aun sin cofinanciamiento.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#proyecto">Explorar el proyecto</a>
+        <a class="btn btn-ghost" href="#modelo">Ver modelo isométrico</a>
+        <a class="btn btn-ghost" href="#evidencias">Ver evidencias</a>
+      </div>
+      <p class="hero-meta">Formulado por <strong style="color:#fff">Ing. Enrique Francisco Flores Gallo</strong> · ALTAMAR FOODS PERU S.R.L. · Paita, Piura · PROMAINPE – Universidad Nacional de Piura · Nov. 2026</p>
+    </div>
+    <aside class="hero-panel" aria-label="Indicadores del proyecto">
+      <h2>Indicadores del proyecto (sin cofinanciamiento)</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="k">Inversión total</div><div class="v">S/ 132,385</div><div class="s">Equipos y software: S/ 62,750</div></div>
+        <div class="kpi"><div class="k">Beneficio estimado</div><div class="v">S/ 9,000</div><div class="s">por mes · supuesto conservador</div></div>
+        <div class="kpi"><div class="k">VAN a 3 años</div><div class="v">S/ 100,473</div><div class="s">COK 12&nbsp;%</div></div>
+        <div class="kpi"><div class="k">TIR anual</div><div class="v">52.3&nbsp;%</div><div class="s">índice de rentabilidad 1.76</div></div>
+        <div class="kpi hl" style="grid-column:span 2"><div class="k">Payback simple / descontado</div><div class="v">14.7 / 19.3 meses</div><div class="s">7.4 meses con fondo al 50&nbsp;% (gran empresa)</div></div>
+      </div>
+      <div class="baseline">
+        <div>Madurez digital hoy (SIRI)<strong>0.875 / 5</strong></div>
+        <div>Datos críticos en papel, Excel o sin captura<strong>12 de 12</strong></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main>
+<!-- 2. RESUMEN -->
+<section class="section" id="resumen" aria-labelledby="t-resumen">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">01</span><p class="eyebrow">Resumen ejecutivo</p><h2 id="t-resumen">Un perfil de proyecto construido desde el diagnóstico</h2></div>
+      <p class="lead">Tres entregables encadenados (SIRI, Data Map y Arquitectura IoT) sostienen cada decisión técnica y cada cifra de este portafolio.</p>
+    </div>
+    <div class="summary">
+      <div class="summary-text">
+        <p>Altamar Foods, planta exportadora de congelados en Paita (580 colaboradores, BRCGS AA+), registra una madurez digital de <strong>0.875/5</strong> (SIRI): sus <strong>12 datos críticos</strong> están en papel, Excel aislado o no se capturan. El proyecto diseña una arquitectura IoT de cuatro capas (sensores PT100, Modbus y MQTT con TLS, un servidor <em>edge</em> con Node-RED y ThingsBoard, y tableros con alertas) para monitorear cadena de frío, recepción de mahi mahi por lote y sala de máquinas de NH3. Con una inversión de <strong>S/ 132,385</strong>, proyecta un beneficio de <strong>S/ 9,000 mensuales</strong>, VAN de S/ 100,473, TIR de 52.3&nbsp;% y recuperación en 15-19 meses sin cofinanciamiento.</p>
+        <div class="chain" aria-label="Método">
+          <span>Diagnóstico SIRI</span><i>→</i><span>Data Map</span><i>→</i><span>Arquitectura IoT</span><i>→</i><span>Evaluación económica</span><i>→</i><span>Piloto 2 semanas</span><i>→</i><span>Despliegue 90 días</span>
+        </div>
+      </div>
+      <div class="factsheet">
+        <dl>
+          <div><dt>Empresa</dt><dd>ALTAMAR FOODS PERU S.R.L.</dd></div>
+          <div><dt>Sector</dt><dd>Pesca · congelados de recursos hidrobiológicos</dd></div>
+          <div><dt>Instalaciones</dt><dd>2 cámaras de 1,000 t · 4 túneles estáticos · 5 IQF · 1 espiral · 22 placas · 2 túneles del frigorífico</dd></div>
+          <div><dt>Abastecimiento</dt><dd>20 embarcaciones propias y más de 200 artesanales</dd></div>
+          <div><dt>Mercados</dt><dd>Nacional · EE. UU. · UE · Asia</dd></div>
+          <div><dt>Programa</dt><dd>PROMAINPE · UNP · Unidades I y II</dd></div>
+          <div><dt>Estado</dt><dd><span class="tag alta">Diagnóstico simulado · por validar en planta</span></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PROYECTO -->
+<section class="section" id="proyecto" aria-labelledby="t-proyecto" style="background:var(--ice-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">02</span><p class="eyebrow">El proyecto</p><h2 id="t-proyecto">Tres módulos, una plataforma compartida</h2></div>
+      <p class="lead">Cada módulo responde a una brecha priorizada del Data Map. Abre una tarjeta para ver sus cuatro capas, costos, riesgo cubierto y beneficio vinculado.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar módulos por categoría del dato">
+      <button class="chip" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="chip" data-filter="Sanitario" aria-pressed="false">Sanitario</button>
+      <button class="chip" data-filter="Trazabilidad" aria-pressed="false">Trazabilidad</button>
+      <button class="chip" data-filter="Operacional" aria-pressed="false">Operacional</button>
+    </div>
+    <div class="cards" id="cards"></div>
+
+    <div class="datamap">
+      <div class="datamap-head">
+        <h3>Data Map: 12 datos críticos de 30 inventariados</h3>
+        <div class="legend"><span><i style="background:var(--warn)"></i>Nivel digital actual (0-3)</span><span><i style="background:var(--teal)"></i>Cubierto por el proyecto</span></div>
+      </div>
+      <div class="dm-wrap">
+        <table class="dm-table" id="dmtable">
+          <caption class="note" style="text-align:left;padding:12px 14px">Pasa el cursor o el foco por una tarjeta para resaltar los datos que cubre.</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">Dato crítico</th><th scope="col">Criticidad</th><th scope="col">Nivel actual</th><th scope="col">Brecha</th><th scope="col">Módulo</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 3b. MODELO ISOMÉTRICO -->
+<section class="section viz-sec" id="modelo" aria-labelledby="t-modelo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="num">03</span><p class="eyebrow">Visualización isométrica</p>
+      <h2 id="t-modelo">El sistema, capa por capa</h2>
+      <p class="lead">Despiece animado de la arquitectura IoT sobre la planta. Los componentes, las cantidades, los modelos de referencia, los protocolos y los costos provienen de los entregables; la disposición espacial es una ilustración conceptual, porque no se cuenta con el plano de la planta.</p>
+    </div>
+    <div class="viz">
+      <div class="stage" id="iso-stage">
+        <div class="stage-bar">
+          <button class="sbtn" id="v-explode" aria-pressed="true">Despiece</button>
+          <button class="sbtn" id="v-tour" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path id="v-tour-ico" d="M7 4l13 8-13 8z" fill="currentColor"/></svg><span id="v-tour-txt">Recorrido guiado</span></button>
+          <button class="sbtn" id="v-reset">Vista general</button>
+        </div>
+        <svg id="iso-svg" viewBox="-200 -372 590 700" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="iso-title iso-desc">
+          <title id="iso-title">Modelo isométrico de la plataforma IoT de Altamar Cold-Chain 4.0</title>
+          <desc id="iso-desc">Cuatro capas apiladas: percepción sobre la planta, conectividad, procesamiento y aplicación. Cada componente es un elemento seleccionable que muestra su ficha.</desc>
+          <defs>
+            <filter id="iso-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g id="iso-cam"><g id="iso-plates"></g><g id="iso-wires"></g><g id="iso-packets"></g></g>
+        </svg>
+        <div class="stage-legend">
+          <span class="item"><span class="vtag doc">Documentado</span>componentes, cantidades, modelos, protocolos y costos</span>
+          <span class="item"><span class="vtag con">Conceptual</span>ubicación, volúmenes y escala</span>
+        </div>
+      </div>
+      <div class="vpanel">
+        <div class="vsteps" id="vsteps" role="group" aria-label="Recorrido por capas"></div>
+        <div class="vfilter" id="vfilter" role="group" aria-label="Filtrar flujo por módulo" hidden>
+          <button class="sbtn" data-m="all" aria-pressed="true">Todos</button>
+          <button class="sbtn" data-m="frio" aria-pressed="false">Cadena de frío</button>
+          <button class="sbtn" data-m="recep" aria-pressed="false">Recepción</button>
+          <button class="sbtn" data-m="ener" aria-pressed="false">Energía NH3</button>
+        </div>
+        <div class="vinfo" id="vinfo" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <details class="vread">
+      <summary>Fase 1 · Lectura de las evidencias que sustentan el modelo</summary>
+      <div class="tw">
+        <table>
+          <thead><tr><th scope="col">Evidencia</th><th scope="col">Qué representa</th><th scope="col">Elementos técnicos identificados</th><th scope="col">Cómo se visualiza</th></tr></thead>
+          <tbody>
+            <tr><td>Datos de la empresa (SIRI y Data Map)</td><td>La configuración física de la planta que se instrumenta.</td><td>2 cámaras de 1,000 t; 12 túneles de congelación (4 estáticos, 5 IQF, 1 espiral y 2 del frigorífico); muelle de recepción abastecido por 20 embarcaciones propias y más de 200 artesanales; sala de máquinas de NH3.</td><td>Volúmenes de la capa base. <span class="vtag con">Conceptual</span></td></tr>
+            <tr><td>Diagnóstico SIRI</td><td>La madurez digital de partida: 0.875 / 5.</td><td>Red OT, visualización en tiempo real y analítica avanzada en nivel 0; pilar Tecnología en 0.50 / 5.</td><td>Explica por qué las capas de conectividad, procesamiento y aplicación se construyen desde cero.</td></tr>
+            <tr><td>Data Map</td><td>Los 12 datos críticos, su origen y su brecha.</td><td>T° de cámaras y túneles, estado de puertas, T° de núcleo y lote en recepción, energía y presiones de compresores (datos 1, 2, 3, 4, 5, 9 y 10).</td><td>Puntos de medición sobre cada zona de la planta. <span class="vtag doc">Documentado</span></td></tr>
+            <tr><td>Catálogo de equipos</td><td>Los 22 ítems con cantidad, modelo, protocolo y costo.</td><td>Percepción S/ 25,400; conectividad S/ 14,950; procesamiento S/ 9,200; aplicación S/ 13,200.</td><td>Componentes, etiquetas y fichas de cada capa. <span class="vtag doc">Documentado</span></td></tr>
+            <tr><td>Arquitectura IoT</td><td>Los 3 datos críticos diseñados en 4 capas.</td><td>4-20 mA, Modbus RTU/TCP, Bluetooth LE, Wi-Fi WPA3, MQTT con TLS (8883, QoS 1), reglas de Node-RED y red OT segmentada (IEC 62443 SL1).</td><td>Conexiones entre capas y flujo de datos animado por módulo. <span class="vtag doc">Documentado</span></td></tr>
+          </tbody>
+        </table>
+        <p class="ex">No se representan las 22 placas de congelamiento ni los 2 túneles de secado, porque quedan fuera del alcance del proyecto, ni los 5 datos críticos reservados para la fase 2. El número de compresores (4) es un supuesto del entregable que debe validarse en planta.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- 4. DESARROLLO -->
+<section class="section" id="desarrollo" aria-labelledby="t-desarrollo">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">04</span><p class="eyebrow">Desarrollo del proyecto</p><h2 id="t-desarrollo">Del reto al impacto, paso a paso</h2></div>
+      <p class="lead">Recorre las cinco etapas. Los resultados son proyecciones del diseño; se validan durante el piloto con registros de planta.</p>
+    </div>
+    <div class="stepper" role="tablist" aria-label="Etapas del proyecto">
+      <button class="step" role="tab" id="tab-reto" aria-controls="p-reto" aria-selected="true"><b>Reto</b><small>Qué estaba en riesgo</small></button>
+      <button class="step" role="tab" id="tab-int" aria-controls="p-int" aria-selected="false" tabindex="-1"><b>Intervención</b><small>Qué se diseñó</small></button>
+      <button class="step" role="tab" id="tab-her" aria-controls="p-her" aria-selected="false" tabindex="-1"><b>Herramientas</b><small>Con qué tecnología</small></button>
+      <button class="step" role="tab" id="tab-res" aria-controls="p-res" aria-selected="false" tabindex="-1"><b>Resultados</b><small>Qué se espera lograr</small></button>
+      <button class="step" role="tab" id="tab-imp" aria-controls="p-imp" aria-selected="false" tabindex="-1"><b>Impacto</b><small>Cuánto vale</small></button>
+    </div>
+
+    <div class="panel active" id="p-reto" role="tabpanel" aria-labelledby="tab-reto">
+      <div class="two">
+        <div class="box">
+          <h3>Una planta exportadora gestionada en papel</h3>
+          <ul>
+            <li>La temperatura de cámaras y túneles se anota a mano cada 2-4 horas, con vacíos nocturnos.</li>
+            <li>El estado de las puertas, primera causa de desvío térmico, no se registra.</li>
+            <li>La T° de núcleo del mahi mahi en recepción no se liga al lote; la trazabilidad se reconstruye a mano.</li>
+            <li>La energía de refrigeración, mayor costo variable, solo se conoce por la factura mensual.</li>
+            <li>El PLC de los compresores de NH3 no entrega datos; las presiones se anotan en bitácora.</li>
+          </ul>
+          <div class="stat-row">
+            <div class="stat"><b>0.875</b><span>SIRI global (de 5)</span></div>
+            <div class="stat"><b>0.50</b><span>pilar Tecnología</span></div>
+            <div class="stat"><b>100&nbsp;%</b><span>datos críticos en nivel 0-1</span></div>
+          </div>
+        </div>
+        <div class="chart-box">
+          <h3>Radar SIRI · 8 dimensiones</h3>
+          <p class="note">Fuente: entregable "Diagnóstico de madurez digital SIRI adaptado".</p>
+          <div id="radar-inline"></div>
+        </div>
+      </div>
+      <div class="box" style="margin-top:20px;background:var(--warn-soft);border-color:#F1D3C0">
+        <h3 style="color:#8A3A10">Lo que cuesta no actuar</h3>
+        <p>Un solo evento de ruptura de frío compromete lotes de 20-50 t de producto (más de USD 100,000) y el registro continuo que exigen BRCGS AA+, SANIPES y los compradores. Un contenedor rechazado por histamina en la FDA o la UE cuesta USD 120,000-150,000, además de la pérdida del cliente.</p>
+      </div>
+    </div>
+
+    <div class="panel" id="p-int" role="tabpanel" aria-labelledby="tab-int" hidden>
+      <div class="two">
+        <div class="box">
+          <h3>Tres datos críticos, cuatro capas cada uno</h3>
+          <ul>
+            <li><b>Cadena de frío:</b> 20 sondas PT100 y 6 sensores de puerta en 2 cámaras y 12 túneles, con alertas escalonadas.</li>
+            <li><b>Recepción y trazabilidad:</b> termómetros Bluetooth, tablets, lector QR, balanza en red y regla HACCP automática.</li>
+            <li><b>Energía y NH3:</b> 6 analizadores de red y 8 transmisores de presión en modo solo lectura.</li>
+            <li>Un servidor <em>edge</em> compartido, red OT segmentada y respaldo diario.</li>
+          </ul>
+          <p class="note" style="margin-top:14px">Las 3 brechas cubren 7 de los 12 datos críticos (1, 2, 3, 4, 5, 9 y 10).</p>
+        </div>
+        <div class="box">
+          <h3>Plan de implementación: 90 días</h3>
+          <p>Piloto previo de 2 semanas en 1 cámara + 1 túnel. Luego:</p>
+          <div class="timeline" aria-label="Cronograma de 90 días">
+            <div><b>30 días</b>Ingeniería y compras</div>
+            <div><b>45 días</b>Instalación y calibración INACAL</div>
+            <div><b>15 días</b>Marcha blanca</div>
+          </div>
+          <p class="note" style="margin-top:14px">Fase 2 prevista: integración con el ERP por API REST.</p>
+        </div>
+      </div>
+      <div class="chart-box" style="margin-top:20px">
+        <h3>Arquitectura IoT de 4 capas</h3>
+        <p class="note">Fuente: entregable "Diseño de arquitectura IoT", hoja Arquitectura IoT.</p>
+        <div id="arch-inline"></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-her" role="tabpanel" aria-labelledby="tab-her" hidden>
+      <div class="stack">
+        <div class="box"><span class="ln">1 · Percepción</span><h3>Instrumentación</h3><p>PT100 clase A ±0.15 °C con transmisor 4-20 mA (ref. WIKA TR10 + T15), contactos magnéticos IP67, termómetros ETI Thermapen Blue, analizadores Schneider PM5110 / Carlo Gavazzi EM24 clase 0.5S, transmisores Danfoss MBS 3000 para NH3. Calibración trazable INACAL.</p></div>
+        <div class="box"><span class="ln">2 · Conectividad</span><h3>Protocolos y red</h3><p>Modbus RTU/TCP (Advantech ADAM-6017, Moxa MGate MB3180, NPort 5110), MQTT con TLS puerto 8883 y QoS 1, Bluetooth LE, Wi-Fi industrial WPA3-Enterprise, gateway Teltonika RUT956 con 4G de respaldo y búfer local.</p></div>
+        <div class="box"><span class="ln">3 · Procesamiento</span><h3>Plataforma edge</h3><p>PC industrial sin ventilador (i5, 16 GB, SSD 1 TB) con Docker: Mosquitto, Node-RED, ThingsBoard CE y PostgreSQL. Código abierto: S/ 0 en licencias. NAS Synology DS224+ en RAID 1 y UPS online 1.5 kVA.</p></div>
+        <div class="box"><span class="ln">4 · Aplicación</span><h3>Decisión y evidencia</h3><p>3 dashboards ThingsBoard, 3 pantallas de 43", balizas con sirena, alertas por Telegram/SMS/correo, tablets Samsung Galaxy Tab Active5 e impresora de etiquetas Zebra ZD421 (QR / GS1-128).</p></div>
+      </div>
+      <div class="two" style="margin-top:20px">
+        <div class="box"><h3>Ciberseguridad OT</h3><ul><li>Red OT segmentada de la IT con VLAN (Moxa EDS-G308).</li><li>Firewall FortiGate 40F con lista blanca, nivel IEC 62443 SL1.</li><li>Sin Wi-Fi dentro de las cámaras: cable Ethernet blindado.</li><li>Respaldo diario de datos y configuraciones.</li></ul></div>
+        <div class="box"><h3>Gobernanza del dato</h3><ul><li>Validación de rangos: se descartan lecturas imposibles o sensores desconectados.</li><li>Solo se guarda el dato validado; el bruto se purga a los 90 días.</li><li>Historial de 3 años o más con auditoría.</li><li>Topics jerárquicos: <code>altamar/paita/frio/camara_01/temp_aire</code>.</li></ul></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-res" role="tabpanel" aria-labelledby="tab-res" hidden>
+      <p class="note" style="margin-bottom:14px">Estructura de cada resultado: acción → contexto → aportación → resultado → impacto. Abre cada uno para leerlo completo.</p>
+      <div class="results" id="results"></div>
+    </div>
+
+    <div class="panel" id="p-imp" role="tabpanel" aria-labelledby="tab-imp" hidden>
+      <div class="two">
+        <div class="chart-box">
+          <h3>Beneficio mensual estimado: S/ 9,000</h3>
+          <p class="note">Supuestos conservadores de la hoja Payback y ROI; validar con registros de planta.</p>
+          <div id="benefit-inline"></div>
+        </div>
+        <div class="chart-box">
+          <h3>Payback por escenario (meses)</h3>
+          <p class="note">Franja de referencia del IoT industrial: 12-24 meses.</p>
+          <div id="payback-inline"></div>
+        </div>
+      </div>
+      <div class="stat-row" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+        <div class="stat"><b>S/ 100,473</b><span>VAN a 3 años, sin fondo</span></div>
+        <div class="stat"><b>52.3&nbsp;%</b><span>TIR anual vs. COK de 12&nbsp;%</span></div>
+        <div class="stat"><b>1.76</b><span>índice de rentabilidad</span></div>
+        <div class="stat"><b>145&nbsp;%</b><span>ROI a 3 años sobre inversión total</span></div>
+      </div>
+      <div class="box" style="margin-top:20px">
+        <h3>Dictamen</h3>
+        <p>El proyecto es rentable por sí mismo: VAN mayor que cero y TIR mayor que el COK, con payback descontado de 19.3 meses. El cofinanciamiento de ProInnóvate no lo vuelve viable; lo vuelve más atractivo (7.4 meses con fondo al 50&nbsp;%) y reduce el riesgo. En el escenario pesimista, con la mitad del beneficio, se recupera en 29.4 meses: marginal, pero antes de los 3 años.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EVIDENCIAS -->
+<section class="section" id="evidencias" aria-labelledby="t-evid" style="background:var(--ice-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">05</span><p class="eyebrow">Galería de evidencias</p><h2 id="t-evid">Lo que respalda cada cifra</h2></div>
+      <p class="lead">Las evidencias del proyecto se generan a partir de los entregables originales. Las fotografías son referenciales, de licencia libre, y no corresponden a la planta de Altamar.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar evidencias">
+      <button class="chip" data-gfilter="all" aria-pressed="true">Todas</button>
+      <button class="chip" data-gfilter="entregable" aria-pressed="false">Entregables del proyecto</button>
+      <button class="chip" data-gfilter="referencia" aria-pressed="false">Imágenes referenciales</button>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- 6. COMPETENCIAS -->
+<section class="section" id="competencias" aria-labelledby="t-comp">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">06</span><p class="eyebrow">Competencias y alcance</p><h2 id="t-comp">Capacidad profesional demostrada</h2></div>
+      <p class="lead">El proyecto integra estrategia, ingeniería de automatización, arquitectura de software y evaluación financiera en una sola línea de razonamiento.</p>
+    </div>
+    <div class="comp">
+      <div class="box"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div><h3>Diagnóstico estratégico</h3><ul><li>Evaluación SIRI de 16 sub-dimensiones</li><li>Data Map: 30 candidatos → 12 críticos × 7 dimensiones</li><li>Priorización por riesgo sanitario, de mercado y de costo</li></ul></div>
+      <div class="box"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4v10.5a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg></div><h3>Automatización industrial</h3><ul><li>Instrumentación PT100 clase A y 4-20 mA</li><li>Modbus RTU/TCP y gateways industriales</li><li>Integración de solo lectura con la sala de NH3</li><li>Calibración trazable INACAL</li></ul></div>
+      <div class="box"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1"/><rect x="3" y="14" width="18" height="6" rx="1"/><path d="M7 7h.01M7 17h.01"/></svg></div><h3>Arquitectura de software</h3><ul><li>Edge en Docker con MQTT/TLS</li><li>Node-RED, ThingsBoard CE, PostgreSQL</li><li>Reglas HACCP como código</li><li>Ciberseguridad OT IEC 62443 SL1</li></ul></div>
+      <div class="box"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Evaluación y financiamiento</h3><ul><li>Payback simple y descontado, VAN, TIR</li><li>Análisis de sensibilidad y escenario pesimista</li><li>Articulación con ProInnóvate (SINACTI)</li></ul></div>
+    </div>
+    <div class="diff">
+      <div><b>Del diagnóstico a la solución</b>Cada sensor responde a un dato crítico del Data Map y cada dato, a una brecha SIRI.</div>
+      <div><b>Datos dentro de la planta</b>El procesamiento edge opera aunque falle internet, sin licencias y sin depender de un proveedor.</div>
+      <div><b>Finanzas conservadoras</b>Rentable sin fondo y con un escenario pesimista que se recupera antes de 3 años.</div>
+    </div>
+    <div class="scope">
+      <div class="box"><h3><span class="tag teal">Incluye</span></h3><ul><li>3 brechas priorizadas: cadena de frío, recepción y lote, energía y NH3</li><li>7 de 12 datos críticos cubiertos directamente</li><li>Hardware, software, instalación, capacitación, consultoría, cloud, mantenimiento del año 1 y contingencia</li></ul></div>
+      <div class="box"><h3><span class="tag">Fase 2</span></h3><ul><li>Integración con el ERP por API REST</li><li>Ampliación a los 5 datos críticos restantes (rendimiento, histamina, despacho, entre otros)</li><li>Modelos predictivos sobre el historial acumulado</li></ul></div>
+      <div class="box"><h3><span class="tag alta">Por validar</span></h3><ul><li>Puntajes SIRI e inventario de datos (simulados)</li><li>Precios referenciales sin IGV, TC S/ 3.70 (3 cotizaciones)</li><li>Beneficio mensual, COK y OPEX</li><li>Número real de compresores (supuesto: 4)</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CONTACTO -->
+<section class="section contact" id="contacto" aria-labelledby="t-contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="num">07</span><p class="eyebrow">Contacto y datos de la empresa</p><h2 id="t-contacto">Conversemos el siguiente paso</h2></div>
+      <p class="lead">Primer paso recomendado: validar en planta la brecha de monitoreo y trazabilidad, y ejecutar el piloto de 2 semanas en 1 cámara y 1 túnel.</p>
+    </div>
+    <div class="cgrid">
+      <div class="cbox">
+        <h3>Formulador del proyecto</h3>
+        <dl>
+          <div><dt>Nombre</dt><dd>Ing. Enrique Francisco Flores Gallo</dd></div>
+          <div><dt>Perfil</dt><dd>Consultor en innovación y transformación digital · Planeamiento estratégico</dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:flogakike2014@gmail.com">flogakike2014@gmail.com</a><button class="copy" data-copy="flogakike2014@gmail.com" data-label="Correo copiado">Copiar</button></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/enriquefloresgallo" target="_blank" rel="noopener">linkedin.com/in/enriquefloresgallo</a></dd></div>
+          <div><dt>Programa</dt><dd>PROMAINPE · Universidad Nacional de Piura</dd></div>
+        </dl>
+      </div>
+      <div class="cbox">
+        <h3>Empresa evaluada</h3>
+        <dl>
+          <div><dt>Razón social</dt><dd>ALTAMAR FOODS PERU S.R.L.</dd></div>
+          <div><dt>RUC</dt><dd><span id="ruc">20536938657</span><button class="copy" data-copy="20536938657">Copiar</button></dd></div>
+          <div><dt>Planta SANIPES</dt><dd>P313-PAI-ATFO</dd></div>
+          <div><dt>Ubicación</dt><dd>Zona Industrial II, Paita, Piura <a href="https://www.google.com/maps/search/?api=1&query=Zona+Industrial+II+Paita+Piura" target="_blank" rel="noopener">Ver en mapa</a></dd></div>
+          <div><dt>Sector</dt><dd>Elaboración y conservación de pescados, crustáceos y moluscos</dd></div>
+          <div><dt>Certificación</dt><dd>BRCGS AA+</dd></div>
+          <div><dt>Mercados</dt><dd>Nacional · EE. UU. · UE · Asia</dd></div>
+        </dl>
+        <div class="links">
+          <a class="btn btn-primary" href="mailto:flogakike2014@gmail.com?subject=Proyecto%20Altamar%20Cold-Chain%204.0">Escribir al formulador</a>
+          <a class="btn btn-ghost" href="https://e-consultaruc.sunat.gob.pe/" target="_blank" rel="noopener">Consulta RUC (SUNAT)</a>
+          <a class="btn btn-ghost" href="https://www.proinnovate.gob.pe/" target="_blank" rel="noopener">ProInnóvate</a>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="color:#8FA6BC;margin-top:24px">Datos reales y públicos: razón social, RUC, ubicación y planta SANIPES. El inventario, los puntajes, los costos y los beneficios son hipótesis de trabajo que deben validarse en planta y ser aprobadas por ALTAMAR antes de usarse en un expediente.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap"><span>Altamar Cold-Chain 4.0 · Ing. Enrique Francisco Flores Gallo · Nov. 2026</span><span>Fotografías referenciales: Wikimedia Commons, con su licencia indicada en cada imagen.</span></div></footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+<dialog id="lb" class="lightbox" aria-label="Evidencia ampliada"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+const fmt=n=>'S/ '+n.toLocaleString('en-US');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- DATOS (de los entregables) ---------- */
+const SIRI=[['Automatización',1],['Conectividad',0.5],['Inteligencia',0],['Operaciones',1],['Cadena de suministro',1],['Ciclo de vida producto',1.5],['Estructura y personas',1.5],['Gobernanza',0.5]];
+const DM=[
+ [1,'T° aire cámaras de almacenamiento (CA-01, CA-02)','ALTA',1,'Digitalizar captura','Sanitario',1],
+ [2,'T° túneles de congelación (estáticos, IQF, espiral)','ALTA',1,'Conectar a red','Sanitario',1],
+ [3,'Estado de puertas de cámaras y antecámaras','ALTA',0,'Digitalizar captura','Operacional',1],
+ [4,'T° núcleo de la materia prima en recepción','ALTA',1,'Digitalizar captura','Sanitario',2],
+ [5,'Lote y embarcación de origen','ALTA',1,'Digitalizar captura','Trazabilidad',2],
+ [6,'Resultado de histamina por lote','ALTA',1,'Integrar a sistema','Regulatorio',0],
+ [7,'Peso de la materia prima recibida','MEDIA',1,'Conectar a red','Operacional',0],
+ [8,'T° núcleo del producto terminado (≤ -18 °C)','ALTA',1,'Digitalizar captura','Sanitario',0],
+ [9,'Consumo eléctrico de la sala de máquinas','ALTA',0,'Digitalizar captura','Operacional',3],
+ [10,'Presiones y estado de los compresores de NH3','MEDIA',1,'Conectar a red','Operacional',3],
+ [11,'Rendimiento por especie y línea','MEDIA',1,'Integrar a sistema','Comercial',0],
+ [12,'Trazabilidad de despacho (lote → pallet → contenedor → cliente)','ALTA',1,'Integrar a sistema','Trazabilidad',0]
+];
+const MODS=[
+ {id:1,title:'Cadena de frío vigilada 24/7',short:'T° de 2 cámaras y 12 túneles + apertura de puertas, con registro cada minuto y alertas escalonadas.',data:[1,2,3],cats:['Sanitario','Operacional'],cost:31850,benefit:'S/ 2,500/mes',benefitTxt:'Reducción de pérdida por cadena de frío',
+  risk:'Una falla de compresor o una puerta abierta de noche puede pasar horas sin detectarse: un evento compromete lotes de 20-50 t (más de USD 100,000) y el registro continuo exigido por BRCGS AA+, SANIPES y compradores.',
+  layers:[
+   ['Percepción',10500,'20 sondas RTD PT100 clase A con transmisor 4-20 mA (ref. WIKA TR10 + T15) + 6 sensores magnéticos de puerta IP67.','4 sondas por cámara × 2 = 8; 1 por túnel × 12 = 12. Rango -50 a +50 °C, ±0.15 °C, calibración INACAL.'],
+   ['Conectividad',10050,'3 módulos Advantech ADAM-6017 (Modbus TCP) + gateway Teltonika RUT956 + switch Moxa EDS-G308 con VLAN + firewall FortiGate 40F.','Ethernet blindado (sin Wi-Fi en cámaras). MQTT con TLS (8883), QoS 1, publicación cada 60 s, búfer local y 4G de respaldo.'],
+   ['Procesamiento',7000,'Servidor edge industrial (i5, 16 GB, SSD 1 TB) con Docker: Mosquitto + Node-RED + ThingsBoard CE + PostgreSQL; UPS online 1.5 kVA.','Reglas: aviso > -20 °C; alarma > -18 °C sostenida 10 min; puerta > 3 min. Historial ≥ 3 años; dato bruto purgado a 90 días.'],
+   ['Aplicación',4300,'Dashboard "Cadena de frío" + 2 pantallas de 43" + 2 balizas con sirena.','Alertas Telegram/SMS/correo con escalamiento operador → jefe de frío → gerente en 15 min; reporte PDF diario para BRCGS/SANIPES.']]},
+ {id:2,title:'Decisión HACCP en el muelle',short:'T° de núcleo del mahi mahi ligada al lote, la embarcación, el peso y la hora de descarga.',data:[4,5],cats:['Sanitario','Trazabilidad'],cost:12700,benefit:'S/ 2,000/mes',benefitTxt:'Reducción de rechazos de exportación',
+  risk:'El mahi mahi forma histamina si se rompe la cadena de frío entre la captura y la planta. Un contenedor rechazado por la FDA o la UE cuesta USD 120,000-150,000, más la pérdida del cliente y el retiro de producto.',
+  layers:[
+   ['Percepción',3800,'4 termómetros de punción Bluetooth LE (ref. ETI Thermapen Blue) + 2 lectores Zebra DS2208 + servidor serial Moxa NPort 5110 para la balanza.','±0.4 °C, IP67, respuesta en 3 s. El QR identifica embarcación y guía de pesca; la balanza RS-232 pasa a Ethernet.'],
+   ['Conectividad',1800,'2 access points Wi-Fi industriales IP67 (ref. Ubiquiti UniFi U6-Mesh) en VLAN OT.','BLE → tablet → Wi-Fi WPA2/WPA3-Enterprise → MQTT con TLS. Sin red, la app guarda y envía después.'],
+   ['Procesamiento',0,'Node-RED + ThingsBoard sobre el servidor edge del módulo 1, sin hardware adicional.','Si la T° supera el límite crítico del plan HACCP (referencia FDA para escómbridos), el lote queda RETENIDO y se exige análisis de histamina; si es conforme, se genera el código de lote.'],
+   ['Aplicación',7100,'2 tablets Samsung Galaxy Tab Active5 + impresora de etiquetas Zebra ZD421.','Formulario: embarcación, guía, especie, peso, T°, foto, decisión y firma. Etiqueta QR del lote y dashboard con ranking de proveedores.']]},
+ {id:3,title:'Energía y sala de máquinas NH3',short:'Consumo por equipo, kWh por tonelada y detección temprana de anomalías en compresores.',data:[9,10],cats:['Operacional'],cost:18200,benefit:'S/ 3,000/mes',benefitTxt:'Ahorro de energía (S/ 2,000) + mantenimiento predictivo (S/ 1,000)',
+  risk:'La refrigeración es el mayor costo variable y hoy no se mide por equipo. Una falla no anticipada de un compresor detiene túneles y cámaras y genera reparaciones de emergencia.',
+  layers:[
+   ['Percepción',11800,'6 analizadores de red Modbus RTU (ref. Schneider PM5110 / Carlo Gavazzi EM24) + 8 transmisores de presión Danfoss MBS 3000.','kW, kWh, cos φ, clase 0.5S. Presión 0-25 bar en succión y descarga (supuesto: 4 compresores de tornillo, validar).'],
+   ['Conectividad',2400,'Bus RS-485 → gateway Moxa MGate MB3180 + 1 módulo ADAM-6017; sale por el gateway del módulo 1.','Lectura cada 15 s (energía) y 5 s (presiones), MQTT con TLS. Solo lectura: no interviene el PLC de control.'],
+   ['Procesamiento',2200,'Node-RED + ThingsBoard + NAS Synology DS224+ (2 × 4 TB, RAID 1).','kWh/t, horas de marcha, ciclos de arranque, relación de compresión; anomalías con media móvil ± 3σ (piloto de ML).'],
+   ['Aplicación',1800,'Dashboard "Energía y sala de máquinas" + 1 pantalla de 43".','Consumo en tiempo real por equipo, curva de demanda, kWh/t por turno y reporte semanal automático para la gerencia.']]}
+];
+const RES=[
+ ['R1','Cadena de frío vigilada las 24 horas','S/ 2,500/mes',['Instalar 20 sondas PT100 clase A y 6 sensores de puerta en 2 cámaras y 12 túneles, conectados por Modbus TCP y MQTT/TLS a un servidor edge.','La T° se anota a mano cada 2-4 h, con vacíos nocturnos, y las puertas no se registran.','Registro cada minuto, alertas escalonadas (> -20 °C aviso, > -18 °C alarma 10 min, puerta > 3 min) y escalamiento en 15 min.','Detección de un desvío en menos de 5 minutos.','Protege lotes de 20-50 t (más de USD 100,000 por evento) y evita pérdidas estimadas en S/ 2,500 al mes.']],
+ ['R2','Decisión HACCP en el muelle y trazabilidad en minutos','S/ 2,000/mes',['Digitalizar la recepción con termómetros Bluetooth, tablets, lector QR, balanza en red y etiquetas de lote.','La T° de núcleo se anota en papel sin ligar al lote; la trazabilidad de más de 220 embarcaciones se reconstruye a mano.','Regla HACCP automática que retiene el lote fuera de límite, exige análisis de histamina y liga lote, embarcación, peso, hora y T°.','Aceptación o retención en el muelle y respuesta a una consulta de trazabilidad en minutos, no en días.','Reduce el riesgo de un rechazo FDA/UE (USD 120,000-150,000) y aporta S/ 2,000 al mes en riesgo evitado.']],
+ ['R3','Energía de refrigeración medida y optimizada','S/ 2,000/mes',['Instalar 6 analizadores de red en compresores, condensadores y tablero general, con el indicador kWh por tonelada.','La refrigeración es el mayor costo variable y solo se conoce por la factura mensual.','Consumo por equipo en tiempo real, curva de demanda y reporte semanal para optimizar secuencia, desescarches y demanda máxima.','2&nbsp;% de ahorro, supuesto conservador frente al 5-15&nbsp;% que reporta la literatura.','S/ 2,000 al mes de ahorro y base objetiva para negociar tarifa y demanda contratada.']],
+ ['R4','Mantenimiento predictivo de la sala de NH3','S/ 1,000/mes',['Instalar 8 transmisores de presión para amoníaco en modo solo lectura, sin intervenir el PLC.','El PLC no entrega datos; una falla no anticipada detiene túneles y cámaras.','Horas de marcha, ciclos, relación de compresión y detección de anomalías ± 3σ como piloto de ML.','Alertas tempranas y al menos una parada no programada evitada al año.','S/ 1,000 al mes en reparaciones de emergencia y horas extra evitadas; mayor seguridad en la instalación de NH3.']],
+ ['R5','Evidencia de auditoría automática','S/ 1,500/mes',['Reemplazar la transcripción por un historial validado de 3 años y reportes PDF diarios.','Cerca de 5 horas-hombre diarias se dedican a registrar, transcribir y armar reportes.','Registro con sello de tiempo, inalterable y listo para auditor y comprador.','Auditorías sin vacíos; calidad pasa de transcribir a analizar.','S/ 1,500 al mes en horas-hombre y protección de la certificación BRCGS AA+.']],
+ ['R6','Salto de madurez digital con ciberseguridad OT','Base para fase 2',['Segmentar la red OT de la IT con VLAN, firewall y respaldo diario (IEC 62443 SL1).','Red OT, visualización, analítica y gobernanza de datos están en 0 en el SIRI.','Primera red OT, 3 dashboards y reglas de calidad del dato.','7 de 12 datos críticos pasan de nivel 0-1 a captura automática con alertas.','El pilar Tecnología (0.50/5) deja de ser el cuello de botella; la planta queda lista para integrar el ERP.']]
+];
+const BENEF=[['Cadena de frío',2500],['Energía',2000],['Rechazos de exportación',2000],['Horas-hombre',1500],['Predictivo NH3',1000]];
+const PAYB=[['Fondo 70&nbsp;% (plantilla)',4.4],['Fondo 50&nbsp;% (gran empresa)',7.4],['Sin fondo · simple',14.7],['Sin fondo · descontado',19.3],['Pesimista · 50&nbsp;% beneficio',29.4]];
+const LAYERINV=[['Percepción',25400],['Conectividad',14950],['Procesamiento',9200],['Aplicación',13200]];
+const FLOW=[['Año 0',-132385],['Año 1',94500],['Año 2',98400],['Año 3',98400]];
+
+/* ---------- SVG CHARTS ---------- */
+function radar(){
+  const W=660,H=380,cx=330,cy=190,R=130,n=SIRI.length;
+  let g='';
+  for(let l=1;l<=5;l++){const pts=[];for(let i=0;i<n;i++){const a=-Math.PI/2+i*2*Math.PI/n;pts.push((cx+Math.cos(a)*R*l/5).toFixed(1)+','+(cy+Math.sin(a)*R*l/5).toFixed(1));}g+=`<polygon points="${pts.join(' ')}" fill="none" stroke="#D5E0E7"/>`;g+=`<text class="svg-t" x="${cx+4}" y="${cy-R*l/5+4}" style="font-size:11px">${l}</text>`;}
+  const pts=[];
+  SIRI.forEach(([lab,v],i)=>{const a=-Math.PI/2+i*2*Math.PI/n;const x=cx+Math.cos(a)*R,y=cy+Math.sin(a)*R;g+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#D5E0E7"/>`;const lx=cx+Math.cos(a)*(R+18),ly=cy+Math.sin(a)*(R+18);const anchor=Math.abs(Math.cos(a))<.2?'middle':(Math.cos(a)>0?'start':'end');g+=`<text class="svg-t" x="${lx}" y="${ly+4}" text-anchor="${anchor}" style="fill:#13202B">${lab} · ${String(v).replace('.',',')}</text>`;pts.push([cx+Math.cos(a)*R*v/5,cy+Math.sin(a)*R*v/5]);});
+  g+=`<polygon points="${pts.map(p=>p.map(c=>c.toFixed(1)).join(',')).join(' ')}" fill="rgba(181,83,26,.22)" stroke="#B5531A" stroke-width="2"/>`;
+  pts.forEach(p=>g+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#B5531A"/>`);
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Radar SIRI: Automatización 1, Conectividad 0.5, Inteligencia 0, Operaciones 1, Cadena de suministro 1, Ciclo de vida 1.5, Estructura y personas 1.5, Gobernanza 0.5, escala 0 a 5">${g}</svg>`;
+}
+function hbars(data,opts={}){
+  const W=520,rowH=opts.rowH||36,lw=opts.lw||170,H=data.length*rowH+20,max=opts.max||Math.max(...data.map(d=>d[1]));
+  let g='';
+  if(opts.band){const x1=lw+(opts.band[0]/max)*(W-lw-70),x2=lw+(opts.band[1]/max)*(W-lw-70);g+=`<rect x="${x1}" y="0" width="${x2-x1}" height="${H-14}" fill="#DDF0F2"/><text class="svg-t" x="${(x1+x2)/2}" y="${H-2}" text-anchor="middle" style="font-size:11px">${opts.band[0]}-${opts.band[1]} meses</text>`;}
+  data.forEach(([l,v],i)=>{const y=i*rowH+6,w=Math.max(2,(v/max)*(W-lw-70));const col=opts.color?opts.color(v,i):'#0B6E79';g+=`<text class="svg-t" x="${lw-10}" y="${y+rowH/2}" text-anchor="end" style="fill:#13202B;font-size:12.5px">${esc(l)}</text><rect x="${lw}" y="${y+6}" width="${w}" height="${rowH-16}" rx="4" fill="${col}"/><text class="svg-h" x="${lw+w+8}" y="${y+rowH/2+1}" style="font-size:13px">${opts.label?opts.label(v):v}</text>`;});
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria||'')}">${g}</svg>`;
+}
+function donut(data,aria){
+  const W=460,H=260,cx=130,cy=130,R=96,r=58,tot=data.reduce((a,d)=>a+d[1],0),cols=['#0B6E79','#0B2545','#7FD3DC','#B5531A'];
+  let a0=-Math.PI/2,g='';
+  data.forEach(([l,v],i)=>{const a1=a0+v/tot*2*Math.PI,lg=a1-a0>Math.PI?1:0;const p=(a,rr)=>[cx+Math.cos(a)*rr,cy+Math.sin(a)*rr];const [x1,y1]=p(a0,R),[x2,y2]=p(a1,R),[x3,y3]=p(a1,r),[x4,y4]=p(a0,r);g+=`<path d="M${x1},${y1} A${R},${R} 0 ${lg} 1 ${x2},${y2} L${x3},${y3} A${r},${r} 0 ${lg} 0 ${x4},${y4}Z" fill="${cols[i]}" stroke="#fff" stroke-width="2"/>`;g+=`<rect x="262" y="${48+i*46}" width="12" height="12" rx="2" fill="${cols[i]}"/><text class="svg-t" x="282" y="${58+i*46}" style="fill:#13202B;font-size:13px">${l}</text><text class="svg-h" x="282" y="${76+i*46}" style="font-size:14px">${fmt(v)} · ${Math.round(v/tot*100)} %</text>`;a0=a1;});
+  g+=`<text class="svg-h" x="${cx}" y="${cy-2}" text-anchor="middle" style="font-size:18px">${fmt(tot)}</text><text class="svg-t" x="${cx}" y="${cy+16}" text-anchor="middle">equipos y software</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(aria)}">${g}</svg>`;
+}
+function flow(){
+  const W=520,H=310,base=150,sc=110/132385,bw=70;let g=`<line x1="40" y1="${base}" x2="${W-10}" y2="${base}" stroke="#94A6B4"/>`;let cum=0;const cp=[];
+  FLOW.forEach(([l,v],i)=>{const x=70+i*115,h=Math.abs(v)*sc,y=v<0?base:base-h;g+=`<rect x="${x}" y="${y}" width="${bw}" height="${h}" rx="4" fill="${v<0?'#B5531A':'#0B6E79'}"/><text class="svg-h" x="${x+bw/2}" y="${v<0?base+h+16:y-6}" text-anchor="middle" style="font-size:12.5px">${(v<0?'-':'')+fmt(Math.abs(v))}</text><text class="svg-t" x="${x+bw/2}" y="${H-6}" text-anchor="middle">${l}</text>`;cum+=v;cp.push([x+bw/2,base-cum*sc]);});
+  g+=`<polyline points="${cp.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#0B2545" stroke-width="2" stroke-dasharray="5 4"/>`;cp.forEach(p=>g+=`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#0B2545"/>`);
+  g+=`<text class="svg-t" x="${W-10}" y="18" text-anchor="end" style="fill:#0B2545">- - flujo acumulado (sin descontar)</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Flujo de caja sin fondo: año 0 menos 132,385; año 1 94,500; años 2 y 3 98,400">${g}</svg>`;
+}
+function arch(){
+  const W=900,H=330,cols=['Percepción','Conectividad','Procesamiento','Aplicación'],items=[
+    ['20 PT100 + 6 puertas','Termómetros BLE + QR','Analizadores + presión NH3'],
+    ['ADAM-6017 · Modbus TCP','Wi-Fi industrial · BLE','MGate RS-485 → TCP'],
+    ['Servidor edge (Docker)','Mosquitto · Node-RED','ThingsBoard · PostgreSQL'],
+    ['Dashboard cadena de frío','Dashboard recepción','Dashboard energía']];
+  const cw=196,gap=32;let g='';
+  cols.forEach((c,i)=>{const x=10+i*(cw+gap);g+=`<rect x="${x}" y="10" width="${cw}" height="${H-60}" rx="12" fill="${i%2?'#F6F9FB':'#EEF4F7'}" stroke="#D5E0E7"/><text class="svg-h" x="${x+16}" y="40" style="font-size:15px">${i+1} · ${c}</text>`;
+    items[i].forEach((t,j)=>{const y=62+j*70;g+=`<rect x="${x+12}" y="${y}" width="${cw-24}" height="54" rx="8" fill="#fff" stroke="${['#0B6E79','#0B2545','#B5531A'][j]}" stroke-width="1.5"/><text class="svg-t" x="${x+cw/2}" y="${y+32}" text-anchor="middle" style="fill:#13202B;font-size:11.5px">${t}</text>`;
+      if(i<3)g+=`<path d="M${x+cw-12} ${y+27} L${x+cw+gap+12} ${y+27}" stroke="#94A6B4" stroke-width="1.5" marker-end="url(#ar)"/>`;});});
+  g+=`<text class="svg-t" x="${W/2}" y="${H-28}" text-anchor="middle" style="fill:#0B2545;font-size:12.5px">Gateway Teltonika RUT956 · MQTT con TLS (8883) · QoS 1 · 4G de respaldo · Red OT segmentada (VLAN + FortiGate, IEC 62443 SL1)</text>`;
+  g+=`<g transform="translate(${W/2-190},${H-14})"><rect width="10" height="10" fill="#0B6E79"/><text class="svg-t" x="14" y="9">Cadena de frío</text><rect x="120" width="10" height="10" fill="#0B2545"/><text class="svg-t" x="134" y="9">Recepción y lote</text><rect x="250" width="10" height="10" fill="#B5531A"/><text class="svg-t" x="264" y="9">Energía y NH3</text></g>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Arquitectura IoT de 4 capas para los 3 módulos"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10z" fill="#94A6B4"/></marker></defs>${g}</svg>`;
+}
+function levels(){
+  const d=[['0 · No se captura',2],['1 · Papel o Excel aislado',10],['2 · Sistema integrado',0],['3 · Tiempo real con alertas',0]];
+  return hbars(d,{max:12,lw:200,aria:'Nivel digital actual de los 12 datos críticos: 2 en nivel 0, 10 en nivel 1, 0 en niveles 2 y 3',label:v=>v+' datos',color:(v,i)=>i<2?'#B5531A':'#94A6B4'});
+}
+
+/* ---------- RENDER ---------- */
+$('#radar-inline').innerHTML=radar();
+$('#arch-inline').innerHTML=arch();
+$('#benefit-inline').innerHTML=hbars(BENEF,{lw:180,aria:'Beneficio mensual por componente',label:v=>fmt(v)});
+$('#payback-inline').innerHTML=hbars(PAYB,{lw:200,max:36,band:[12,24],aria:'Payback por escenario en meses',label:v=>v+' m',color:v=>v<12?'#0B6E79':v<=24?'#0B2545':'#B5531A'});
+
+const modOf=n=>{const r=DM.find(d=>d[0]===n);return r?r[6]:0};
+const cardsEl=$('#cards');
+MODS.forEach(m=>{
+  const b=document.createElement('button');b.className='card';b.dataset.cats=m.cats.join(',');b.dataset.mod=m.id;
+  b.setAttribute('aria-haspopup','dialog');
+  b.innerHTML=`<span class="idx" aria-hidden="true">0${m.id}</span><div style="display:flex;gap:6px;flex-wrap:wrap">${m.cats.map(c=>`<span class="tag">${c}</span>`).join('')}<span class="tag alta">Prioridad ALTA</span></div><h3>${m.title}</h3><p>${m.short}</p><div class="layers-mini" aria-hidden="true">${m.layers.map(l=>`<span style="opacity:${l[1]?1:.3}"></span>`).join('')}</div><p class="note">Datos del Data Map: ${m.data.join(', ')} · Beneficio vinculado: ${m.benefit}</p><div class="row"><div><span>Equipos y software</span><br><b>${fmt(m.cost)}</b></div><span class="more">Ver las 4 capas →</span></div>`;
+  b.addEventListener('click',()=>openMod(m));
+  const hi=on=>$$('#dmtable tbody tr').forEach(tr=>tr.classList.toggle('on',on&&+tr.dataset.mod===m.id));
+  b.addEventListener('mouseenter',()=>hi(true));b.addEventListener('mouseleave',()=>hi(false));b.addEventListener('focus',()=>hi(true));b.addEventListener('blur',()=>hi(false));
+  cardsEl.appendChild(b);
+});
+$('#dmtable tbody').innerHTML=DM.map(d=>`<tr data-mod="${d[6]}"><td class="n">${d[0]}</td><td>${d[1]}<br><span class="note">${d[5]}</span></td><td><span class="tag ${d[2]==='ALTA'?'alta':''}">${d[2]}</span></td><td><span class="lvl" aria-label="Nivel ${d[3]} de 3">${[1,2,3].map(k=>`<i class="${k<=d[3]?'f':''}"></i>`).join('')}</span> ${d[3]}</td><td>${d[4]}</td><td>${d[6]?`<span class="cov">Módulo ${d[6]}</span>`:'<span class="cov no">Fase 2</span>'}</td></tr>`).join('');
+
+$$('[data-filter]').forEach(ch=>ch.addEventListener('click',()=>{
+  $$('[data-filter]').forEach(c=>c.setAttribute('aria-pressed',c===ch));
+  const f=ch.dataset.filter;$$('.card').forEach(c=>c.classList.toggle('dim',f!=='all'&&!c.dataset.cats.split(',').includes(f)));
+}));
+
+const dlg=$('#dlg');
+function openMod(m){
+  dlg.innerHTML=`<div class="dlg-head"><div><p class="eyebrow" style="color:var(--sky)">Módulo 0${m.id} · Datos ${m.data.join(', ')}</p><h3 id="dlg-title">${m.title}</h3><p>${m.short}</p></div><button class="close" aria-label="Cerrar">×</button></div>
+  <div class="dlg-body"><div class="dlg-kpis"><div>Equipos y software<b>${fmt(m.cost)}</b></div><div>Beneficio vinculado<b>${m.benefit}</b>${m.benefitTxt}</div><div>Datos críticos cubiertos<b>${m.data.length} de 12</b>${m.data.map(n=>DM[n-1][1]).join(' · ')}</div></div>
+  <div class="risk"><b>Riesgo que cubre:</b> ${m.risk}</div>
+  <div>${m.layers.map((l,i)=>`<div class="layer"><h4>${i+1} · ${l[0]}</h4><div><p>${l[2]}</p><p>${l[3]}</p></div><div class="cost">${l[1]?fmt(l[1]):'S/ 0<br><span class="note">compartido</span>'}</div></div>`).join('')}</div>
+  <p class="note">Fuente: entregable "Diseño de arquitectura IoT" y "Catálogo de equipos" del Data Map. Precios referenciales sin IGV; validar con 3 cotizaciones.</p></div>`;
+  $('.close',dlg).addEventListener('click',()=>dlg.close());
+  dlg.showModal();
+}
+[dlg,$('#lb')].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close();}));
+
+$('#results').innerHTML=RES.map((r,i)=>`<details class="res"${i===0?' open':''}><summary><span class="rn">${r[0]}</span><h3>${r[1]}</h3><span class="val">${r[2]}</span></summary><div class="acari">${['Acción','Contexto','Aportación','Resultado','Impacto'].map((k,j)=>`<div><b>${k}</b>${r[3][j]}</div>`).join('')}</div></details>`).join('');
+
+/* stepper tabs */
+const tabs=$$('.step');
+function selTab(t){tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;const p=$('#'+x.getAttribute('aria-controls'));p.hidden=!on;p.classList.toggle('active',on);});}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>selTab(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];selTab(n);n.focus();}});});
+
+/* ---------- GALERÍA ---------- */
+const CM=f=>`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(f)}?width=1200`;
+const CMP=f=>`https://commons.wikimedia.org/wiki/File:${encodeURIComponent(f.replace(/ /g,'_'))}`;
+const GAL=[
+ {k:'entregable',w:1,t:'Radar de madurez digital SIRI',d:'8 dimensiones; la inteligencia (0) y la conectividad y gobernanza (0.5) son las brechas prioritarias.',src:'Entregable 1 · Diagnóstico SIRI',svg:radar},
+ {k:'entregable',w:1,t:'Nivel digital de los 12 datos críticos',d:'Ningún dato crítico está integrado ni en tiempo real: 2 no se capturan y 10 viven en papel o Excel aislado.',src:'Entregable 2 · Data Map, hoja Gráficas y Estadística',svg:levels},
+ {k:'entregable',w:2,t:'Arquitectura IoT de 4 capas',d:'Tres módulos sobre una plataforma edge y una red OT compartidas.',src:'Entregable 3 · Arquitectura IoT',svg:arch},
+ {k:'entregable',w:1,t:'Inversión en equipos por capa IoT',d:'La capa de percepción concentra el 40&nbsp;% de la inversión, como es típico al pasar de nivel 1 a nivel 3.',src:'Entregable 2 · Catálogo de equipos',svg:()=>donut(LAYERINV,'Inversión por capa IoT: Percepción 25,400; Conectividad 14,950; Procesamiento 9,200; Aplicación 13,200')},
+ {k:'entregable',w:1,t:'Flujo de caja a 3 años (sin fondo)',d:'Inversión de S/ 132,385 recuperada dentro del segundo año; VAN S/ 100,473 al 12&nbsp;%.',src:'Entregable 3 · Payback y ROI, sección D',svg:flow},
+ {k:'referencia',w:0,t:'Mahi mahi (Coryphaena hippurus)',d:'Especie escómbrida sensible a la formación de histamina: el motivo del control de T° en el muelle.',src:'Wikimedia Commons · CC BY-SA 3.0',f:'Mahi_mahi_costa_rica.jpg'},
+ {k:'referencia',w:0,t:'Almacén frigorífico industrial',d:'Imagen referencial de almacenamiento en frío a gran escala.',src:'Roger W Haworth · Wikimedia Commons · CC BY-SA 2.0',f:'Goldsborough_Cold_Store,_near_Flaxby,_North_Yorkshire.jpg'},
+ {k:'referencia',w:0,t:'Contenedores reefer apilados',d:'El despacho en contenedores refrigerados cierra la trazabilidad lote → pallet → contenedor → cliente.',src:'Wikimedia Commons · ver licencia en la fuente',f:'Reefer_container_stacked.jpeg'},
+ {k:'referencia',w:0,t:'Elemento RTD de platino',d:'Principio de medición de las sondas PT100 clase A seleccionadas para cámaras y túneles.',src:'Wikimedia Commons · ver licencia en la fuente',f:'SPRT_Glass_Capsule_-_RTD.jpg'},
+ {k:'referencia',w:0,t:'Paita, ciudad portuaria',d:'La planta opera en la Zona Industrial II de Paita, puerto de salida de sus contenedores refrigerados.',src:'Wikimedia Commons · ver licencia en la fuente',f:'EX_ADUANA_DE_PAITA_-_PAITA.jpg'},
+ {k:'referencia',w:0,t:'Cámara de almacenamiento en frío, 1891',d:'Grabado histórico: la vigilancia manual de la cámara que el proyecto deja atrás.',src:'Popular Science Monthly, 1891 · Dominio público',f:'PSM_V39_D038_Room_in_a_cold_storage_warehouse.jpg'}
+];
+const gal=$('#gallery');
+GAL.forEach((g,i)=>{
+  const fig=document.createElement('figure');fig.className='fig'+(g.w===2?' full':g.w?' wide':'');fig.dataset.k=g.k;
+  const media=g.svg?g.svg():`<img src="${CM(g.f)}" alt="${esc(g.t)}" loading="lazy">`;
+  fig.innerHTML=`<button class="open" aria-label="Ampliar: ${esc(g.t)}" style="${g.svg?'background:#fff;padding:12px':''}">${media}</button><figcaption><span class="tag ${g.k==='entregable'?'teal':''}" style="align-self:flex-start">${g.k==='entregable'?'Evidencia del proyecto':'Imagen referencial'}</span><b>${g.t}</b><span>${g.d}</span><span class="src">${g.f?`<a href="${CMP(g.f)}" target="_blank" rel="noopener">${esc(g.src)}</a>`:esc(g.src)}</span></figcaption>`;
+  const img=$('img',fig);if(img)img.addEventListener('error',()=>{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerHTML:`<b>${esc(g.t)}</b><span>La imagen se carga desde Wikimedia Commons y requiere conexión.</span>`}));});
+  $('button.open',fig).addEventListener('click',()=>openLb(i));
+  gal.appendChild(fig);
+});
+$$('[data-gfilter]').forEach(ch=>ch.addEventListener('click',()=>{$$('[data-gfilter]').forEach(c=>c.setAttribute('aria-pressed',c===ch));const f=ch.dataset.gfilter;$$('.fig').forEach(x=>x.hidden=f!=='all'&&x.dataset.k!==f);}));
+const lb=$('#lb');let cur=0;
+function visibleIdx(){return GAL.map((g,i)=>i).filter(i=>!gal.children[i].hidden);}
+function openLb(i){cur=i;const g=GAL[i];lb.innerHTML=`<div class="lb-body">${g.svg?g.svg():`<img src="${CM(g.f)}" alt="${esc(g.t)}">`}</div><div class="lb-foot"><button aria-label="Anterior" data-d="-1">‹</button><span><b style="color:#fff">${g.t}</b> · ${esc(g.src)}</span><span style="display:flex;gap:8px"><button aria-label="Siguiente" data-d="1">›</button><button aria-label="Cerrar" data-x>×</button></span></div>`;
+  $$('[data-d]',lb).forEach(b=>b.addEventListener('click',()=>step(+b.dataset.d)));$('[data-x]',lb).addEventListener('click',()=>lb.close());if(!lb.open)lb.showModal();}
+function step(d){const v=visibleIdx();const p=v.indexOf(cur);openLb(v[(p+d+v.length)%v.length]);}
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+
+/* ---------- NAV ---------- */
+const mb=$('.menu-btn'),nl=$('#navlinks');
+mb.addEventListener('click',()=>{const o=nl.classList.toggle('open');mb.setAttribute('aria-expanded',o);});
+$$('#navlinks a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');mb.setAttribute('aria-expanded',false);}));
+const secs=$$('main section[id]');
+function onScroll(){const h=document.documentElement;$('#progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';let id='';secs.forEach(s=>{if(s.getBoundingClientRect().top<120)id=s.id;});$$('#navlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* copiar */
+const toast=$('#toast');
+$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);toast.textContent=b.dataset.label||'RUC copiado';}catch(e){toast.textContent='No se pudo copiar; selecciónalo manualmente';}toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);}));
+})();
+</script>
+<script>
+(function(){
+'use strict';
+const svg=document.getElementById('iso-svg'); if(!svg) return;
+const RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const NS='http://www.w3.org/2000/svg';
+const C30=0.8660254;
+const P=(x,y,z)=>[(x-y)*C30,(x+y)*0.5-z];
+const pts=a=>a.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
+const money=n=>'S/ '+n.toLocaleString('en-US');
+
+/* ---------- paleta ---------- */
+const COL={
+  plate:{t:'rgba(22,58,104,.82)',r:'#0C2444',f:'#0F2A4D',s:'rgba(127,211,220,.6)'},
+  zone:{t:'#3A6AA6',r:'#20456F',f:'#2B5687',s:'#6E9CD0'},
+  frio:{t:'#B4ECF1',r:'#3FA3AF',f:'#7FD3DC',s:'#0B6E79'},
+  door:{t:'#FFE7A3',r:'#C9A227',f:'#F2C94C',s:'#8A6D0F'},
+  recep:{t:'#FFFFFF',r:'#A9BCCD',f:'#DCE5EB',s:'#8FA6BC'},
+  ener:{t:'#F8C3A0',r:'#B5531A',f:'#E07B3C',s:'#7A300B'},
+  net:{t:'#DCE6EF',r:'#7F98B1',f:'#A9BDD0',s:'#5B7896'},
+  dark:{t:'#123A66',r:'#061528',f:'#0A1E38',s:'#7FD3DC'},
+  exist:{t:'#4A6B91',r:'#2E4A6B',f:'#3B5B80',s:'#6B8BB0'}
+};
+const WIRE={frio:'#7FD3DC',recep:'#FFFFFF',ener:'#F39A62',shared:'#C9D6E2'};
+
+function box(x,y,z,w,d,h,c){
+  const t=[P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)];
+  const r=[P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)];
+  const f=[P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)];
+  const s=c.s||'none';
+  return `<polygon points="${pts(f)}" fill="${c.f}" stroke="${s}" stroke-width=".7"/><polygon points="${pts(r)}" fill="${c.r}" stroke="${s}" stroke-width=".7"/><polygon points="${pts(t)}" fill="${c.t}" stroke="${s}" stroke-width=".7"/>`;
+}
+function line(a,b,cls,extra=''){const A=P(...a),B=P(...b);return `<line x1="${A[0].toFixed(1)}" y1="${A[1].toFixed(1)}" x2="${B[0].toFixed(1)}" y2="${B[1].toFixed(1)}" class="${cls}" ${extra}/>`;}
+function ztext(x,y,z,t){const a=P(x,y,z);return `<text class="ztxt" x="${a[0].toFixed(1)}" y="${(a[1]+3).toFixed(1)}" text-anchor="middle">${t}</text>`;}
+
+/* ---------- datos de componentes (de los entregables) ---------- */
+const COMP={
+ pt100:{n:'Sondas RTD PT100 con transmisor',L:0,q:'20 unidades',ref:'WIKA TR10 + transmisor T15 (o equivalente)',spec:'Clase A ±0.15 °C · -50 a +50 °C · inox IP67 · 4-20 mA · calibración INACAL',fn:'Medir de forma continua la T° del aire de cada cámara y túnel.',loc:'4 por cámara (8) y 1 por túnel (12).',cost:9600,mod:'frio',src:'Catálogo #1 · Arquitectura, dato #1'},
+ door:{n:'Sensores magnéticos de puerta',L:0,q:'6 unidades',ref:'Contacto magnético industrial IP67',spec:'Salida digital ON/OFF · conmutación a 25 mm · apto para cámaras de frío',fn:'Detectar puertas abiertas más de 3 minutos.',loc:'Cámaras y antecámaras.',cost:900,mod:'frio',src:'Catálogo #2 · Data Map, dato 3'},
+ recep:{n:'Termómetros de punción BLE y lectores QR',L:0,q:'4 termómetros + 2 lectores',ref:'ETI Thermapen Blue · Zebra DS2208',spec:'±0.4 °C, respuesta en 3 s, IP67 · lectura 1D/2D (GS1-128 y QR)',fn:'Medir la T° de núcleo de cada lote e identificar embarcación y guía de pesca.',loc:'Muelle de recepción.',cost:3100,mod:'recep',src:'Catálogo #11 y #12 · Arquitectura, dato #2'},
+ energy:{n:'Analizadores de red multifunción',L:0,q:'6 unidades',ref:'Schneider PM5110 / Carlo Gavazzi EM24',spec:'kW, kWh, cos φ, corriente por fase · clase 0.5S · Modbus RTU',fn:'Medir el consumo eléctrico por equipo.',loc:'4 compresores + condensadores evaporativos + tablero general.',cost:6600,mod:'ener',src:'Catálogo #17 · Arquitectura, dato #3'},
+ press:{n:'Transmisores de presión para NH3',L:0,q:'8 unidades',ref:'Danfoss MBS 3000',spec:'0-25 bar · compatible con amoníaco · 4-20 mA',fn:'Medir presión de succión y descarga de los compresores.',loc:'Succión y descarga de 4 compresores (supuesto del entregable; validar en planta).',cost:5200,mod:'ener',src:'Catálogo #18 · Arquitectura, dato #3'},
+ mgate:{n:'Gateway Modbus RTU → TCP y módulo 8AI',L:1,q:'1 + 1 unidades',ref:'Moxa MGate MB3180 · Advantech ADAM-6017',spec:'RS-485 → Ethernet · 8 entradas 4-20 mA · lectura cada 15 s (energía) y 5 s (presiones)',fn:'Llevar los datos de la sala de máquinas al broker en modo solo lectura, sin intervenir el PLC.',loc:'Sala de máquinas de NH3.',cost:2400,mod:'ener',src:'Catálogo #19 y #20'},
+ adam:{n:'Módulos de E/S analógicas 8AI',L:1,q:'3 unidades',ref:'Advantech ADAM-6017',spec:'8 entradas 4-20 mA, 2 DO · Modbus TCP · cable Ethernet blindado',fn:'Convertir las señales de las sondas y puertas en datos Modbus TCP.',loc:'Cámaras y túneles (sin Wi-Fi dentro de las cámaras).',cost:3900,mod:'frio',src:'Catálogo #3 · Arquitectura, dato #1'},
+ ap:{n:'Access points Wi-Fi industriales',L:1,q:'2 unidades',ref:'Ubiquiti UniFi U6-Mesh / Cisco Catalyst IW',spec:'Exterior IP67 · Wi-Fi 6 · WPA3-Enterprise · VLAN OT',fn:'Conectar las tablets del muelle; si no hay red, la app guarda y envía después.',loc:'Muelle de recepción.',cost:1800,mod:'recep',src:'Catálogo #14 · Arquitectura, dato #2'},
+ nport:{n:'Servidor serial para la balanza',L:1,q:'1 unidad',ref:'Moxa NPort 5110',spec:'RS-232 → Ethernet (TCP/IP)',fn:'Capturar el peso de la balanza de recepción sin transcripción.',loc:'Balanza de plataforma existente.',cost:700,mod:'recep',src:'Catálogo #13'},
+ core:{n:'Switch administrable y firewall',L:1,q:'1 + 1 unidades',ref:'Moxa EDS-G308 · Fortinet FortiGate 40F',spec:'8 puertos Gigabit con VLAN · separación OT/IT con lista blanca (IEC 62443 SL1)',fn:'Segmentar la red OT y protegerla de la red administrativa.',loc:'Tablero de red de planta.',cost:5000,mod:'shared',src:'Catálogo #5 y #6'},
+ gw:{n:'Gateway IoT industrial 4G/LTE',L:1,q:'1 unidad',ref:'Teltonika RUT956',spec:'Modbus → MQTT con TLS (8883) · QoS 1 · publicación cada 60 s · búfer local · VPN · 4G de respaldo',fn:'Publicar las lecturas en el broker con cifrado y sin perder datos si cae el enlace.',loc:'Tablero de red de planta.',cost:1150,mod:'shared',src:'Catálogo #4 · Arquitectura, dato #1'},
+ edge:{n:'Servidor edge industrial',L:2,q:'1 unidad',ref:'PC industrial sin ventilador · Intel i5 · 16 GB · SSD 1 TB',spec:'Docker: Mosquitto + Node-RED + ThingsBoard CE + PostgreSQL · S/ 0 en licencias',fn:'Validar rangos, aplicar reglas (aviso > -20 °C; alarma > -18 °C sostenida 10 min; regla HACCP; kWh/t; anomalías ± 3σ) y guardar el historial de 3 años o más.',loc:'Sala técnica (compartido por los 3 módulos).',cost:5500,mod:'shared',src:'Catálogo #7 · Arquitectura, capa 3'},
+ ups:{n:'UPS online 1.5 kVA',L:2,q:'1 unidad',ref:'APC / Eaton online (o equivalente)',spec:'Autonomía de 30 minutos o más',fn:'Mantener servidor y red operativos ante cortes de energía.',loc:'Sala técnica.',cost:1500,mod:'shared',src:'Catálogo #8'},
+ nas:{n:'NAS de respaldo',L:2,q:'1 unidad',ref:'Synology DS224+ con 2 × 4 TB (RAID 1)',spec:'Respaldo diario de datos y configuraciones',fn:'Proteger el historial y la configuración de todo el sistema IoT.',loc:'Sala técnica.',cost:2200,mod:'shared',src:'Catálogo #21'},
+ screens:{n:'Pantallas de 43" para dashboards',L:3,q:'3 unidades',ref:'Pantalla comercial de uso 24/7',spec:'HDMI · dashboards "Cadena de frío" y "Energía y sala de máquinas"',fn:'Mostrar el estado en tiempo real a jefatura de frío, calidad y mantenimiento.',loc:'Sala de calidad y jefatura de frío (2) y sala de máquinas (1).',cost:5400,mod:'shared',src:'Catálogo #9 y #22'},
+ baliza:{n:'Balizas con sirena',L:3,q:'2 unidades',ref:'Baliza LED + sirena 24 V',spec:'Accionada por salida digital',fn:'Dar la alarma local de desvío térmico o puerta abierta.',loc:'Antecámaras.',cost:700,mod:'frio',src:'Catálogo #10'},
+ tablets:{n:'Tablets rugerizadas',L:3,q:'2 unidades',ref:'Samsung Galaxy Tab Active5',spec:'IP68 · resistente a caídas · Wi-Fi / MQTT',fn:'Formulario de recepción: embarcación, guía, especie, peso, T°, foto, decisión y firma.',loc:'Muelle de recepción.',cost:5200,mod:'recep',src:'Catálogo #15'},
+ printer:{n:'Impresora de etiquetas de lote',L:3,q:'1 unidad',ref:'Zebra ZD421',spec:'Térmica · etiquetas QR / GS1-128',fn:'Etiquetar cada lote para seguirlo en el proceso.',loc:'Muelle de recepción.',cost:1900,mod:'recep',src:'Catálogo #16'},
+ alerts:{n:'Alertas escalonadas',L:3,q:'Configuración de software',ref:'Telegram / SMS / correo desde ThingsBoard',spec:'Escalamiento operador → jefe de frío → gerente de planta en 15 min · reporte PDF diario',fn:'Llevar el desvío a la persona responsable y dejar evidencia para BRCGS y SANIPES.',loc:'Dispositivos del personal.',cost:0,mod:'shared',src:'Arquitectura, dato #1, capa 4'},
+ z_sala:{zone:1,n:'Sala de máquinas de NH3',L:0,fn:'Compresores de refrigeración con amoníaco; mayor costo variable de la planta.',src:'Datos de la empresa · Data Map, datos 9 y 10'},
+ z_ca1:{zone:1,n:'Cámara de almacenamiento CA-01',L:0,fn:'Capacidad de 1,000 t de producto congelado.',src:'Datos de la empresa · Data Map, dato 1'},
+ z_ca2:{zone:1,n:'Cámara de almacenamiento CA-02',L:0,fn:'Capacidad de 1,000 t de producto congelado.',src:'Datos de la empresa · Data Map, dato 1'},
+ z_tun:{zone:1,n:'Túneles de congelación',L:0,fn:'12 túneles instrumentados: 4 estáticos, 5 IQF, 1 espiral Gyrocompact y 2 del frigorífico.',src:'Datos de la empresa · Arquitectura, dato #1'},
+ z_mue:{zone:1,n:'Muelle de recepción',L:0,fn:'Recepción de materia prima de 20 embarcaciones propias y más de 200 artesanales; balanza de plataforma existente.',src:'Datos de la empresa · Data Map, datos 4, 5 y 7'}
+};
+const LAYERS=[
+ {t:'1 · PERCEPCIÓN + PLANTA',c:25400},
+ {t:'2 · CONECTIVIDAD',c:14950},
+ {t:'3 · PROCESAMIENTO',c:9200},
+ {t:'4 · APLICACIÓN',c:13200}
+];
+const STEPS=[
+ {n:'0',t:'Vista general',s:'Las 4 capas sobre la planta',L:-1,h:'Arquitectura IoT de 4 capas',p:'La planta física sostiene la capa de percepción; sobre ella se apilan la conectividad, el procesamiento edge y la aplicación. Selecciona una capa o un componente para ver su ficha.',dl:[['Equipos','S/ 62,750 en hardware y software'],['Proyecto','S/ 132,385 con servicios'],['Cobertura','7 de 12 datos críticos']]},
+ {n:'1',t:'Percepción + planta',s:'Sensores sobre cada zona',L:0,h:'Capa 1 · Percepción',p:'20 sondas PT100 y 6 sensores de puerta en las 2 cámaras y 12 túneles; termómetros BLE y lectores QR en el muelle; 6 analizadores y 8 transmisores de presión en la sala de máquinas.',dl:[['Inversión','S/ 25,400 (40&nbsp;%)'],['Señales','4-20 mA, digital, Modbus RTU, Bluetooth LE'],['Calibración','Trazable a INACAL']]},
+ {n:'2',t:'Conectividad',s:'Red OT segmentada',L:1,h:'Capa 2 · Conectividad',p:'Las señales pasan a Modbus TCP por cable blindado, el muelle se conecta por Wi-Fi industrial y el gateway publica en MQTT con TLS. La red OT queda separada de la red administrativa.',dl:[['Inversión','S/ 14,950 (24&nbsp;%)'],['Protocolo','MQTT con TLS (8883), QoS 1'],['Seguridad','VLAN + firewall · IEC 62443 SL1']]},
+ {n:'3',t:'Procesamiento',s:'Servidor edge en planta',L:2,h:'Capa 3 · Procesamiento',p:'Un servidor edge con Docker valida cada lectura, aplica las reglas de frío, HACCP y energía, y guarda el historial. Los datos no salen de la planta y el sistema opera aunque falle internet.',dl:[['Inversión','S/ 9,200 (15&nbsp;%)'],['Software','Código abierto · S/ 0 en licencias'],['Respaldo','NAS RAID 1 y UPS online']]},
+ {n:'4',t:'Aplicación',s:'Dashboards, alertas y etiquetas',L:3,h:'Capa 4 · Aplicación',p:'Tres dashboards en pantallas de 43", balizas en antecámaras, tablets e impresora de etiquetas en el muelle, y alertas que escalan del operador al gerente de planta en 15 minutos.',dl:[['Inversión','S/ 13,200 (21&nbsp;%)'],['Usuarios','Frío, calidad, compras y mantenimiento'],['Evidencia','Reporte PDF diario BRCGS / SANIPES']]},
+ {n:'▸',t:'Flujo de datos',s:'Secuencia de funcionamiento',L:-2,h:'Flujo de datos por módulo',p:'Los puntos animados recorren el camino real de cada dato, del sensor a la decisión. Filtra por módulo para seguir una secuencia.',dl:[]}
+];
+const FLOWTXT={
+ all:'Sensor → conversión de señal → red OT → MQTT con TLS → servidor edge (validación y reglas) → dashboard, alerta o etiqueta.',
+ frio:'PT100 (4-20 mA) → ADAM-6017 (Modbus TCP) → gateway RUT956 (MQTT con TLS, cada 60 s) → Node-RED valida y aplica reglas (> -18 °C sostenida 10 min) → ThingsBoard: dashboard, baliza y alerta escalada en 15 min.',
+ recep:'Termómetro BLE + lector QR + balanza (NPort) → tablet por Wi-Fi WPA3 → MQTT con TLS → regla HACCP: lote conforme o RETENIDO con análisis de histamina → etiqueta QR (ZD421) y dashboard de recepción.',
+ ener:'Analizadores (Modbus RTU) y transmisores de presión (4-20 mA) → MGate MB3180 / ADAM-6017, solo lectura → MQTT con TLS → Node-RED: kWh por tonelada y anomalías ± 3σ → dashboard de energía y reporte semanal.'
+};
+
+/* ---------- construcción de la escena ---------- */
+let popIdx=0;
+function hs(id,inner,anchor,lab,ldx=0,ldy=0){
+  const c=COMP[id];const a=P(...anchor);const delay=(0.5+c.L*0.32+(popIdx++%8)*0.06).toFixed(2);
+  let lbl='';
+  if(lab){const w=lab.length*5.7+16,lx=a[0]+ldx,ly=a[1]-34+ldy;
+    lbl=`<g class="lbl"><line x1="${a[0].toFixed(1)}" y1="${a[1].toFixed(1)}" x2="${lx.toFixed(1)}" y2="${(ly+9).toFixed(1)}"/><rect x="${(lx-w/2).toFixed(1)}" y="${(ly-9).toFixed(1)}" width="${w.toFixed(1)}" height="18" rx="4"/><text x="${lx.toFixed(1)}" y="${(ly+3.5).toFixed(1)}" text-anchor="middle">${lab}</text></g>`;}
+  return `<g class="hs" data-id="${id}" tabindex="0" role="button" aria-label="${c.n}${c.zone?' (ilustración conceptual)':''}"><g class="pop" style="animation-delay:${delay}s"><g class="body">${inner}</g><circle cx="${a[0].toFixed(1)}" cy="${a[1].toFixed(1)}" r="15" fill="transparent"/></g>${lbl}</g>`;
+}
+function plateBase(i){
+  let g=box(0,0,-6,420,200,6,COL.plate);
+  for(let x=30;x<420;x+=30)g+=line([x,0,0],[x,200,0],'',`stroke="rgba(127,211,220,.09)"`);
+  for(let y=40;y<200;y+=40)g+=line([0,y,0],[420,y,0],'',`stroke="rgba(127,211,220,.09)"`);
+  const a=P(6,200,-6);
+  g+=`<g transform="translate(${(a[0]+2).toFixed(1)},${(a[1]+14).toFixed(1)}) rotate(30)"><text class="ptitle" x="0" y="0">${LAYERS[i].t}</text><text class="pcost" x="0" y="14">${money(LAYERS[i].c)}</text></g>`;
+  return g;
+}
+const sc=[];
+// Capa 0: planta + percepción
+let L0=plateBase(0);
+L0+=hs('z_sala',box(10,10,0,100,85,30,COL.zone),[60,52,30],'');
+L0+=ztext(60,52,30,'SALA NH3');
+L0+=hs('z_ca1',box(130,10,0,125,85,44,COL.zone),[192,52,44],'');
+L0+=hs('z_ca2',box(270,10,0,125,85,44,COL.zone),[332,52,44],'');
+L0+=hs('z_mue',box(10,115,0,100,75,5,COL.zone),[60,152,5],'');
+let tun='';for(let k=0;k<12;k++)tun+=box(135+k*22.5,115,0,18,30,20,COL.zone);
+L0+=hs('z_tun',tun,[268,130,20],'');
+L0+=ztext(192,58,44,'CA-01 · 1,000 t')+ztext(332,58,44,'CA-02 · 1,000 t')+ztext(60,165,5,'MUELLE');
+let pt='';[[145,22],[230,22],[145,75],[230,75],[285,22],[370,22],[285,75],[370,75]].forEach(([x,y])=>pt+=box(x,y,44,6,6,8,COL.frio));
+for(let k=0;k<12;k++)pt+=box(141+k*22.5,127,20,6,6,8,COL.frio);
+L0+=hs('pt100',pt,[262,40,52],'20 PT100 · clase A',0,-8);
+let dr='';[150,192,234,290,332,374].forEach(x=>dr+=box(x,95,10,10,2,10,COL.door));
+L0+=hs('door',dr,[262,96,20],'6 sensores de puerta',40,40);
+let bal=box(78,166,5,24,18,4,COL.exist);L0+=bal;
+let rc='';[[22,128],[40,128],[22,142],[40,142]].forEach(([x,y])=>rc+=box(x,y,5,5,5,10,COL.recep));[[62,128],[62,142]].forEach(([x,y])=>rc+=box(x,y,5,8,6,6,COL.recep));
+L0+=hs('recep',rc,[40,138,15],'Termómetros BLE + QR',-20,-4);
+let en='';for(let k=0;k<6;k++)en+=box(18+k*14,18,30,9,6,10,COL.ener);
+L0+=hs('energy',en,[55,21,40],'6 analizadores de red',-30,-6);
+let pr='';for(let k=0;k<8;k++)pr+=box(18+(k%4)*22,60+Math.floor(k/4)*16,30,5,5,12,COL.ener);
+L0+=hs('press',pr,[52,70,42],'8 transmisores NH3',-44,30);
+sc.push(L0);
+// Capa 1: conectividad
+let L1=plateBase(1);
+L1+=line([68,177,1],[22,147,1],'pwire');
+L1+=hs('mgate',box(45,40,0,22,16,10,COL.ener),[56,48,10],'MGate + ADAM-6017',-20,0);
+L1+=hs('adam',box(180,40,0,20,14,10,COL.frio)+box(320,40,0,20,14,10,COL.frio)+box(260,120,0,20,14,10,COL.frio),[190,47,10],'3 × ADAM-6017',0,0);
+L1+=hs('ap',box(15,140,0,14,14,14,COL.recep)+box(61,170,0,14,14,14,COL.recep),[22,147,14],'2 × Wi-Fi IP67',-30,0);
+L1+=hs('nport',box(90,130,0,16,12,8,COL.recep),[98,136,8],'NPort 5110',30,-6);
+L1+=hs('core',box(190,155,0,34,22,8,COL.net)+box(190,155,8,34,22,8,COL.dark),[207,166,16],'Switch VLAN + firewall',0,0);
+const ga=P(345,160,10),gb=P(345,160,26);
+L1+=hs('gw',box(320,155,0,26,18,10,COL.net)+`<line x1="${ga[0]}" y1="${ga[1]}" x2="${gb[0]}" y2="${gb[1]}" stroke="#DCE6EF" stroke-width="1.5"/><circle cx="${gb[0]}" cy="${gb[1]}" r="2" fill="#7FD3DC"/>`,[333,164,10],'Gateway RUT956 · 4G',20,0);
+sc.push(L1);
+// Capa 2: procesamiento
+let L2=plateBase(2);
+L2+=line([137,107,1],[190,100,1],'pwire')+line([278,106,1],[230,100,1],'pwire');
+L2+=hs('ups',box(125,95,0,24,24,22,COL.net),[137,107,22],'UPS 1.5 kVA',-30,0);
+let ed=box(185,80,0,50,40,36,COL.dark);
+['#7FD3DC','#5FC0CB','#3FA3AF','#0B6E79'].forEach((c,k)=>ed+=box(188,83,40+k*7,44,34,4,{t:c,r:'#0A1E38',f:'#123A66',s:'#7FD3DC'}));
+for(let k=0;k<4;k++){const a=P(185+50,84+k*9,8),b=P(185+50,84+k*9,28);ed+=`<line x1="${a[0].toFixed(1)}" y1="${a[1].toFixed(1)}" x2="${b[0].toFixed(1)}" y2="${b[1].toFixed(1)}" stroke="#7FD3DC" stroke-opacity=".55"/>`;}
+L2+=hs('edge',ed,[210,100,66],'Edge · Mosquitto · Node-RED · ThingsBoard · PostgreSQL',0,-6);
+L2+=hs('nas',box(265,95,0,26,22,26,COL.net),[278,106,26],'NAS RAID 1',34,0);
+sc.push(L2);
+// Capa 3: aplicación
+let L3=plateBase(3);
+let scrS='';[[178,40],[318,40],[40,40]].forEach(([x,y])=>{scrS+=box(x+14,y+1,0,6,2,10,COL.net)+box(x,y,10,34,3,22,{t:'#7FD3DC',r:'#061528',f:'#0F3A5F',s:'#7FD3DC'});});
+L3+=hs('screens',scrS,[195,42,32],'3 pantallas 43"',0,0);
+let bz='';[[150,95],[290,95]].forEach(([x,y])=>{bz+=box(x,y,0,8,8,10,COL.net);const c=P(x+4,y+4,16);bz+=`<circle cx="${c[0].toFixed(1)}" cy="${c[1].toFixed(1)}" r="4.5" fill="#F39A62" stroke="#FFE7A3"/>`;});
+L3+=hs('baliza',bz,[154,99,18],'2 balizas con sirena',-10,0);
+L3+=hs('tablets',box(20,140,0,18,26,2,COL.recep)+box(48,140,0,18,26,2,COL.recep),[35,152,2],'2 tablets IP68',-24,0);
+L3+=hs('printer',box(35,172,0,22,18,12,COL.recep),[46,181,12],'Zebra ZD421',30,10);
+const ph=box(322,150,0,10,4,20,COL.dark);const pb=P(332,150,30);
+L3+=hs('alerts',ph+`<rect x="${(pb[0]-2).toFixed(1)}" y="${(pb[1]-12).toFixed(1)}" width="40" height="14" rx="7" fill="#7FD3DC"/><text x="${(pb[0]+18).toFixed(1)}" y="${(pb[1]-2).toFixed(1)}" text-anchor="middle" style="font:700 8px Inter,sans-serif;fill:#0B2545">ALERTA</text>`,[327,152,20],'Telegram / SMS / correo',10,6);
+sc.push(L3);
+
+const platesG=document.getElementById('iso-plates');
+platesG.innerHTML=sc.map((g,i)=>`<g class="plate" id="iso-pl${i}" data-l="${i}">${g}</g>`).join('');
+const plates=[0,1,2,3].map(i=>document.getElementById('iso-pl'+i));
+
+/* conexiones entre capas: [capa,x,y,z] → [capa,x,y,z], módulo */
+const CON=[
+ [[0,192,52,52],[1,190,47,10],'frio'],[[0,332,52,52],[1,330,47,10],'frio'],[[0,268,130,28],[1,270,127,10],'frio'],
+ [[0,262,96,20],[1,330,47,10],'frio'],
+ [[0,40,138,15],[1,22,147,14],'recep'],[[0,90,175,9],[1,98,136,8],'recep'],
+ [[0,55,21,40],[1,56,48,10],'ener'],[[0,52,70,42],[1,56,48,10],'ener'],
+ [[1,207,166,16],[2,210,100,36],'shared'],[[1,333,164,26],[2,210,100,36],'shared'],
+ [[2,210,100,66],[3,195,42,32],'frio'],[[2,210,100,66],[3,335,42,32],'frio'],[[2,210,100,66],[3,57,42,32],'ener'],
+ [[2,210,100,66],[3,154,99,18],'frio'],[[2,210,100,66],[3,35,152,2],'recep'],[[2,210,100,66],[3,46,181,12],'recep'],[[2,210,100,66],[3,327,152,20],'shared'],
+ [[1,190,47,10],[1,207,166,16],'frio'],[[1,330,47,10],[1,207,166,16],'frio'],[[1,270,127,10],[1,207,166,16],'frio'],
+ [[1,22,147,14],[1,207,166,16],'recep'],[[1,98,136,8],[1,207,166,16],'recep'],[[1,56,48,10],[1,207,166,16],'ener'],
+ [[1,207,166,16],[1,333,164,10],'shared']
+];
+/* cadenas de flujo por módulo (índices de CON), en orden de recorrido */
+const CHAINS={frio:[[0,17,23,9,10],[1,18,23,9,11],[2,19,23,9,13],[3,18,23,9,16]],recep:[[4,20,8,14],[5,21,8,15]],ener:[[6,22,23,9,12],[7,22,23,9,12]]};
+const wiresG=document.getElementById('iso-wires'),packG=document.getElementById('iso-packets');
+const wires=CON.map(c=>{const e=document.createElementNS(NS,'path');e.setAttribute('class','wire');e.setAttribute('stroke',WIRE[c[2]]);wiresG.appendChild(e);return e;});
+const packets=[];
+Object.keys(CHAINS).forEach(m=>CHAINS[m].forEach((ch,k)=>{for(let r=0;r<2;r++){const e=document.createElementNS(NS,'circle');e.setAttribute('r','3.4');e.setAttribute('fill',WIRE[m]);e.setAttribute('stroke','#0B2545');e.setAttribute('stroke-width','1');packG.appendChild(e);packets.push({e,m,ch,ph:(k*0.21+r*0.5)%1});}}));
+
+/* ---------- estado y cámara ---------- */
+const VB={cx:95,cy:-22};
+const st={gap:104,gT:104,s:.82,sT:1,fyL:-1,enter:RM?1:0,mx:0,my:0,mxT:0,myT:0,step:0,filter:'all',on:false,last:0,t:0,tour:null,pin:null,started:false};
+const offs=[0,0,0,0].map(()=>({x:0,y:0}));
+function plateOffset(i){return offs[i];}
+function scr(L,x,y,z){const a=P(x,y,z),o=offs[L];return [a[0]+o.x,a[1]+o.y];}
+const cam=document.getElementById('iso-cam');
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const ease=t=>1-Math.pow(1-t,3);
+function frame(ts){
+  const dt=st.last?Math.min(50,ts-st.last):16;st.last=ts;st.t+=dt/1000;
+  const k=RM?1:1-Math.pow(0.0025,dt/1000);
+  st.gap+=(st.gT-st.gap)*k;st.s+=(st.sT-st.s)*k;st.mx+=(st.mxT-st.mx)*k;st.my+=(st.myT-st.my)*k;
+  if(st.started&&st.enter<1)st.enter=RM?1:Math.min(1,st.enter+dt/2300);
+  for(let i=0;i<4;i++){
+    const e=ease(clamp((st.enter-i*0.15)/0.45,0,1));
+    const depth=i-1.5;
+    offs[i].x=st.mx*depth*7;offs[i].y=-i*st.gap-(1-e)*150+st.my*depth*3;
+    plates[i].setAttribute('transform',`translate(${offs[i].x.toFixed(2)},${offs[i].y.toFixed(2)})`);
+    const active=st.step>=1&&st.step<=4?(st.step-1===i):true;
+    plates[i].style.opacity=(e*(active?1:0.22)).toFixed(3);
+  }
+  // cámara
+  const L=STEPS[st.step].L;
+  const fy=L>=0?155-L*st.gap-22:(310-3*st.gap-40)/2;
+  const ty=(st.cy=st.cy===undefined?fy:st.cy+(fy-st.cy)*k);
+  cam.setAttribute('transform',`translate(${VB.cx} ${VB.cy}) scale(${st.s.toFixed(4)}) translate(${-95} ${(-ty).toFixed(2)})`);
+  // cables
+  const wireVis=st.enter>0.85;
+  CON.forEach((c,i)=>{const A=scr(...c[0]),B=scr(...c[1]);const mx=(A[0]+B[0])/2,my=(A[1]+B[1])/2-18;
+    wires[i].setAttribute('d',`M${A[0].toFixed(1)},${A[1].toFixed(1)} Q${mx.toFixed(1)},${my.toFixed(1)} ${B[0].toFixed(1)},${B[1].toFixed(1)}`);
+    const okL=st.step>=1&&st.step<=4?(c[0][0]===st.step-1||c[1][0]===st.step-1):true;
+    const okF=st.step!==5||st.filter==='all'||c[2]===st.filter||c[2]==='shared';
+    wires[i].style.opacity=wireVis?(okL&&okF?(st.step===5?.95:.6):.08):0;
+  });
+  // paquetes
+  const showP=!RM&&wireVis&&(st.step===0||st.step===5);
+  packets.forEach(p=>{
+    const vis=showP&&(st.step===0?true:(st.filter==='all'||st.filter===p.m));
+    if(!vis){p.e.setAttribute('opacity','0');return;}
+    const sp=st.step===5?0.32:0.18;let u=(st.t*sp+p.ph)%1;const seg=Math.min(p.ch.length-1,Math.floor(u*p.ch.length));const lu=u*p.ch.length-seg;
+    const c=CON[p.ch[seg]];const A=scr(...c[0]),B=scr(...c[1]);const mx=(A[0]+B[0])/2,my=(A[1]+B[1])/2-18;
+    const x=(1-lu)*(1-lu)*A[0]+2*(1-lu)*lu*mx+lu*lu*B[0],y=(1-lu)*(1-lu)*A[1]+2*(1-lu)*lu*my+lu*lu*B[1];
+    p.e.setAttribute('cx',x.toFixed(1));p.e.setAttribute('cy',y.toFixed(1));p.e.setAttribute('opacity',st.step===5?'1':'.65');
+  });
+  if(st.on)requestAnimationFrame(frame);
+}
+function run(){if(!st.on){st.on=true;st.last=0;requestAnimationFrame(frame);}}
+
+/* ---------- panel ---------- */
+const info=document.getElementById('vinfo');
+const stepsEl=document.getElementById('vsteps');
+const filt=document.getElementById('vfilter');
+STEPS.forEach((s,i)=>{const b=document.createElement('button');b.className='vstep';b.setAttribute('aria-pressed',i===0);b.innerHTML=`<span class="n">${s.n}</span><span><b>${s.t}</b><small>${s.s}</small></span>`;b.addEventListener('click',()=>{stopTour();setStep(i);});stepsEl.appendChild(b);});
+function stepInfo(){const s=STEPS[st.step];
+  if(st.step===5){info.innerHTML=`<div class="tags"><span class="vtag doc">Documentado</span><span class="vtag lay">Secuencia</span></div><h3>${s.h}</h3><p>${FLOWTXT[st.filter]}</p><p class="note" style="margin-top:10px;color:#8FA6BC">${s.p}</p>`;return;}
+  info.innerHTML=`<div class="tags"><span class="vtag doc">Documentado</span>${s.L>=0?`<span class="vtag lay">Capa ${s.L+1}</span>`:''}</div><h3>${s.h}</h3><p>${s.p}</p><dl>${s.dl.map(d=>`<div><dt>${d[0]}</dt><dd>${d[1]}</dd></div>`).join('')}</dl>`;}
+function compInfo(id){const c=COMP[id];
+  if(c.zone){info.innerHTML=`<div class="tags"><span class="vtag con">Ilustración conceptual</span><span class="vtag lay">Planta</span></div><h3>${c.n}</h3><p>${c.fn}</p><dl><div><dt>Volumen</dt><dd>Representación esquemática; no proviene de un plano.</dd></div><div><dt>Fuente</dt><dd>${c.src}</dd></div></dl>`;return;}
+  info.innerHTML=`<div class="tags"><span class="vtag doc">Documentado</span><span class="vtag lay">Capa ${c.L+1}</span><span class="vtag con">Ubicación conceptual</span></div><h3>${c.n}</h3><p>${c.fn}</p><dl><div><dt>Cantidad</dt><dd>${c.q}</dd></div><div><dt>Referencia</dt><dd>${c.ref}</dd></div><div><dt>Especificación</dt><dd>${c.spec}</dd></div><div><dt>Ubicación</dt><dd>${c.loc}</dd></div><div><dt>Costo</dt><dd>${c.cost?money(c.cost)+' (sin IGV)':'S/ 0 · software'}</dd></div><div><dt>Fuente</dt><dd>${c.src}</dd></div></dl>`;}
+function setStep(i){
+  st.step=i;
+  $$s('.vstep').forEach((b,k)=>b.setAttribute('aria-pressed',k===i));
+  plates.forEach((p,k)=>p.classList.toggle('show-lbl',i>=1&&i<=4&&k===i-1));
+  st.sT=i>=1&&i<=4?1.42:(st.gT<80?1.12:1);
+  filt.hidden=i!==5;
+  clearPin();stepInfo();
+}
+function $$s(q){return Array.from(document.querySelectorAll(q));}
+function clearPin(){if(st.pin){const o=svg.querySelector('.hs.sel');if(o)o.classList.remove('sel');st.pin=null;}}
+svg.querySelectorAll('.hs').forEach(h=>{
+  const id=h.dataset.id;
+  h.addEventListener('mouseenter',()=>compInfo(id));
+  h.addEventListener('focus',()=>compInfo(id));
+  h.addEventListener('mouseleave',()=>{st.pin?compInfo(st.pin):stepInfo();});
+  h.addEventListener('blur',()=>{st.pin?compInfo(st.pin):stepInfo();});
+  const pick=()=>{stopTour();clearPin();h.classList.add('sel');st.pin=id;compInfo(id);const L=COMP[id].L;if(st.step>=1&&st.step<=4&&st.step-1!==L)setStep(L+1),h.classList.add('sel'),st.pin=id,compInfo(id);};
+  h.addEventListener('click',pick);
+  h.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}if(e.key==='Escape'){clearPin();stepInfo();}});
+});
+filt.querySelectorAll('[data-m]').forEach(b=>b.addEventListener('click',()=>{filt.querySelectorAll('[data-m]').forEach(x=>x.setAttribute('aria-pressed',x===b));st.filter=b.dataset.m;stepInfo();}));
+const exB=document.getElementById('v-explode');
+exB.addEventListener('click',()=>{const on=exB.getAttribute('aria-pressed')!=='true';exB.setAttribute('aria-pressed',on);exB.textContent=on?'Despiece':'Ensamblado';st.gT=on?104:60;if(!(st.step>=1&&st.step<=4))st.sT=on?1:1.12;});
+document.getElementById('v-reset').addEventListener('click',()=>{stopTour();setStep(0);});
+const tourB=document.getElementById('v-tour'),tourTxt=document.getElementById('v-tour-txt'),tourIco=document.getElementById('v-tour-ico');
+function stopTour(){if(st.tour){clearInterval(st.tour);st.tour=null;tourB.setAttribute('aria-pressed','false');tourTxt.textContent='Recorrido guiado';tourIco.setAttribute('d','M7 4l13 8-13 8z');}}
+tourB.addEventListener('click',()=>{
+  if(st.tour){stopTour();return;}
+  tourB.setAttribute('aria-pressed','true');tourTxt.textContent='Pausar recorrido';tourIco.setAttribute('d','M6 4h4v16H6zM14 4h4v16h-4z');
+  let i=st.step>=5?0:st.step+1;setStep(i);
+  st.tour=setInterval(()=>{i=(i+1)%STEPS.length;setStep(i);if(i===0)stopTour();},4600);
+});
+/* parallax y profundidad */
+const stage=document.getElementById('iso-stage');
+if(!RM){stage.addEventListener('pointermove',e=>{const r=stage.getBoundingClientRect();st.mxT=((e.clientX-r.left)/r.width-.5)*2;st.myT=((e.clientY-r.top)/r.height-.5)*2;});stage.addEventListener('pointerleave',()=>{st.mxT=0;st.myT=0;});}
+/* entrada progresiva al hacerse visible */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){if(!st.started){st.started=true;svg.classList.add('go');}run();}
+  else st.on=false;
+}),{threshold:.2});
+io.observe(stage);
+setStep(0);
+for(let i=0;i<4;i++)plates[i].style.opacity=RM?1:0;
+})();
+
+</script>
+</body>
+</html>
